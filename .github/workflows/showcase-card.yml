@@ -76,7 +76,7 @@ jobs:
           ]
 
           WIDTH = 980
-          HEIGHT = 750
+          HEIGHT = 840
 
           def esc(text):
               return html.escape(text)
@@ -113,7 +113,7 @@ jobs:
               '''
 
               for i, line in enumerate(lines):
-                  dy = 0 if i == 0 else 23
+                  dy = 0 if i == 0 else 24
                   out += f'<tspan x="{x}" dy="{dy}">{esc(line)}</tspan>'
 
               out += '</text>'
@@ -313,7 +313,7 @@ jobs:
               status_y = y + 84
 
               desc_x = x + 28
-              desc_y = y + 144
+              desc_y = y + 150
 
               chips_x = x + 28
               chips_y = y + h - 62
@@ -353,10 +353,10 @@ jobs:
               '''
 
           cards = [
-              project_card(42, 140, 426, 230, projects[0]),
-              project_card(512, 140, 426, 230, projects[1]),
-              project_card(42, 410, 426, 230, projects[2]),
-              project_card(512, 410, 426, 230, projects[3]),
+              project_card(42, 140, 426, 270, projects[0]),
+              project_card(512, 140, 426, 270, projects[1]),
+              project_card(42, 460, 426, 270, projects[2]),
+              project_card(512, 460, 426, 270, projects[3]),
           ]
 
           svg = f'''<svg width="{WIDTH}" height="{HEIGHT}" viewBox="0 0 {WIDTH} {HEIGHT}" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -383,7 +383,7 @@ jobs:
 
             {''.join(cards)}
 
-            <text x="42" y="720" fill="#747474"
+            <text x="42" y="808" fill="#747474"
                   font-family="Inter, Segoe UI, Arial, sans-serif"
                   font-size="12">
               last update: {now}
