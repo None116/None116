@@ -1,66 +1,61 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,45:1f2937,100:7c3aed&height=210&section=header&text=Semoof&fontSize=58&fontColor=ffffff&animation=fadeIn&fontAlignY=36&desc=Web%20%2F%20Serverless%20%2F%20AI%20Tools&descSize=18&descAlignY=58" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:020617,45:0f172a,100:0891b2&height=220&section=header&text=Semoof&fontSize=62&fontColor=e0f2fe&animation=fadeIn&fontAlignY=35&desc=Web%20Developer%20%E2%80%A2%20Serverless%20Tools%20%E2%80%A2%20AI%20Experiments&descSize=17&descAlignY=57" />
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=22&duration=2300&pause=800&color=A855F7&center=true&vCenter=true&width=850&lines=I+break+things%2C+fix+them%2C+then+commit.;Building+web+apps+and+serverless+tools.;Private+repos%2C+public+grind.;Clean+code.+Quiet+builds." />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=22&duration=2400&pause=900&color=22D3EE&center=true&vCenter=true&width=850&lines=I+break+things%2C+fix+them%2C+then+commit.;Building+clean+web+apps+and+serverless+tools.;Private+repos%2C+public+grind.;Quiet+work.+Visible+progress." />
 
 <br/>
 
-<img src="https://komarev.com/ghpvc/?username=None116&style=for-the-badge&color=7c3aed&label=PROFILE+VIEWS" />
+<img src="https://komarev.com/ghpvc/?username=None116&style=for-the-badge&color=0891b2&label=PROFILE+VIEWS" />
 
 </div>
 
 ---
 
-## `$ whoami`
+<div align="center">
+
+### `Semoof / None116`
+
+**Web Developer • Serverless Tools • AI Experiments**
+
+</div>
+
+---
+
+## `whoami`
 
 ```txt
-name: Semoof
-username: None116
-role: Web / Serverless Developer
-stack: JavaScript, React, Cloudflare Workers, APIs, AI tools
-mode: building quietly
+name        Semoof
+username    None116
+role        Web / Serverless Developer
+stack       JavaScript, React, Cloudflare Workers, APIs, AI tools
+status      building quietly
 ```
+
+---
+
+## Focus
 
 <div align="center">
 
 <table>
 <tr>
-<td align="center" width="33%">
-<b>Web</b>
-<br/>
-clean UI, pages, animations
+<td width="33%" align="center">
+<h3>Web</h3>
+<p>clean UI<br/>pages<br/>animations</p>
 </td>
-<td align="center" width="33%">
-<b>Serverless</b>
-<br/>
-workers, APIs, automation
+<td width="33%" align="center">
+<h3>Serverless</h3>
+<p>Cloudflare Workers<br/>APIs<br/>automation</p>
 </td>
-<td align="center" width="33%">
-<b>AI Tools</b>
-<br/>
-moderation, filters, experiments
+<td width="33%" align="center">
+<h3>AI Tools</h3>
+<p>moderation<br/>filters<br/>experiments</p>
 </td>
 </tr>
 </table>
 
 </div>
-
----
-
-## About
-
-I build web apps, serverless tools and AI-powered experiments.
-
-Most of my work is private, but the grind is visible.
-
-```txt
-> code
-> break
-> fix
-> commit
-> repeat
-```
 
 ---
 
@@ -76,11 +71,11 @@ Most of my work is private, but the grind is visible.
 
 <div align="center">
 
-![JavaScript](https://img.shields.io/badge/JavaScript-111827?style=for-the-badge&logo=javascript)
-![React](https://img.shields.io/badge/React-111827?style=for-the-badge&logo=react)
-![Cloudflare](https://img.shields.io/badge/Cloudflare-111827?style=for-the-badge&logo=cloudflare)
-![API](https://img.shields.io/badge/API-111827?style=for-the-badge&logo=fastapi)
-![GitHub](https://img.shields.io/badge/GitHub-111827?style=for-the-badge&logo=github)
+![JavaScript](https://img.shields.io/badge/JavaScript-020617?style=for-the-badge&logo=javascript)
+![React](https://img.shields.io/badge/React-020617?style=for-the-badge&logo=react)
+![Cloudflare](https://img.shields.io/badge/Cloudflare-020617?style=for-the-badge&logo=cloudflare)
+![API](https://img.shields.io/badge/API-020617?style=for-the-badge&logo=fastapi)
+![GitHub](https://img.shields.io/badge/GitHub-020617?style=for-the-badge&logo=github)
 
 </div>
 
@@ -108,7 +103,7 @@ Web Experiments
 
 ```txt
 Serverless Tools
-├─ Workers
+├─ workers
 ├─ APIs
 ├─ automation
 └─ small useful systems
@@ -121,6 +116,8 @@ Serverless Tools
 <div align="center">
 
 <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=None116&theme=github_dark" />
+
+<br/>
 
 <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=None116&theme=github_dark" />
 
@@ -143,97 +140,21 @@ Serverless Tools
 ## Current Mode
 
 ```txt
-learning: always
-building: quietly
-repos: mostly private
-commits: visible
-secrets: never pushed
+learning      always
+building      quietly
+repos         mostly private
+commits       visible
+secrets       never pushed
 ```
 
 ---
 
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=18&duration=3000&pause=1000&color=7C3AED&center=true&vCenter=true&width=650&lines=commitment+%3E+motivation;ship+small%2C+improve+daily;quiet+work%2C+visible+progress" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=18&duration=3000&pause=1000&color=22D3EE&center=true&vCenter=true&width=650&lines=commitment+%3E+motivation;ship+small%2C+improve+daily;quiet+work%2C+visible+progress" />
 
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:7c3aed,50:111827,100:0d1117&height=130&section=footer" />
-
-</div>![Cloudflare](https://img.shields.io/badge/Cloudflare-111827?style=for-the-badge&logo=cloudflare)
-![GitHub](https://img.shields.io/badge/GitHub-111827?style=for-the-badge&logo=github)
-![Node.js](https://img.shields.io/badge/Node.js-111827?style=for-the-badge&logo=node.js)
-
-</div>
-
----
-
-## Projects
-
-```txt
-AI Moderation Worker
-├─ Cloudflare Worker
-├─ Groq API fallback
-├─ local filter
-├─ moderation logic
-└─ private source code
-```
-
-```txt
-Web Experiments
-├─ clean UI
-├─ animations
-├─ frontend logic
-├─ API integrations
-└─ private builds
-```
-
-```txt
-Serverless Tools
-├─ Workers
-├─ APIs
-├─ automation
-└─ small useful systems
-```
-
----
-
-## GitHub Stats
-
-<div align="center">
-
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=None116&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=a855f7&icon_color=a855f7&text_color=c9d1d9" />
-
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=None116&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=a855f7&text_color=c9d1d9" />
-
-</div>
-
----
-
-## Activity
-
-<div align="center">
-
-<img src="https://raw.githubusercontent.com/None116/None116/output/github-contribution-grid-snake-dark.svg" />
-
-</div>
-
----
-
-## Current Mode
-
-```txt
-learning: always
-building: quietly
-repos: mostly private
-commits: visible
-secrets: never pushed
-```
-
----
-
-<div align="center">
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:7c3aed,50:111827,100:0d1117&height=130&section=footer" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0891b2,45:0f172a,100:020617&height=140&section=footer" />
 
 </div>
