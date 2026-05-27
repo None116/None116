@@ -64,7 +64,7 @@ jobs:
           ]
 
           WIDTH = 920
-          HEIGHT = 570
+          HEIGHT = 590
 
           def esc(text):
               return html.escape(text)
@@ -75,10 +75,9 @@ jobs:
               current = ""
 
               for word in words:
-                  test = word if not current else current + " " + word
-
-                  if len(test) <= max_chars:
-                      current = test
+                  candidate = word if not current else current + " " + word
+                  if len(candidate) <= max_chars:
+                      current = candidate
                   else:
                       if current:
                           lines.append(current)
@@ -95,171 +94,162 @@ jobs:
 
               return lines
 
-          def render_multiline_text(x, y, lines):
+          def render_multiline_text(x, y, lines, color="#B8C2CF", size=14, line_height=22):
               result = f'''
-              <text x="{x}" y="{y}" fill="#B8C2CF"
+              <text x="{x}" y="{y}" fill="{color}"
                     font-family="Inter, Segoe UI, Arial, sans-serif"
-                    font-size="14" font-weight="400">
+                    font-size="{size}" font-weight="400">
               '''
-
               for i, line in enumerate(lines):
-                  dy = 0 if i == 0 else 22
+                  dy = 0 if i == 0 else line_height
                   result += f'<tspan x="{x}" dy="{dy}">{esc(line)}</tspan>'
-
               result += "</text>"
               return result
 
-          def tag_style(text):
+          def tag_style(name):
               styles = {
-                  "React": {
-                      "icon": "R",
-                      "chip_fill": "#0F2238",
-                      "chip_stroke": "#223A57",
-                      "icon_fill": "#14304B",
-                      "icon_stroke": "#27557A",
-                      "icon_text": "#7DD3FC",
-                      "text_color": "#C7D8EA"
-                  },
-                  "JavaScript": {
-                      "icon": "JS",
-                      "chip_fill": "#201A08",
-                      "chip_stroke": "#4D4120",
-                      "icon_fill": "#3C320B",
-                      "icon_stroke": "#6B5A18",
-                      "icon_text": "#FDE68A",
-                      "text_color": "#E7DDAC"
-                  },
-                  "UI": {
-                      "icon": "UI",
-                      "chip_fill": "#132233",
-                      "chip_stroke": "#29435F",
-                      "icon_fill": "#1B2F47",
-                      "icon_stroke": "#345474",
-                      "icon_text": "#93C5FD",
-                      "text_color": "#C9D8E8"
-                  },
-                  "Workers": {
-                      "icon": "W",
-                      "chip_fill": "#23170F",
-                      "chip_stroke": "#4A3324",
-                      "icon_fill": "#3A2417",
-                      "icon_stroke": "#6B4128",
-                      "icon_text": "#FDBA74",
-                      "text_color": "#E6CFBD"
-                  },
-                  "API": {
-                      "icon": "{}",
-                      "chip_fill": "#122232",
-                      "chip_stroke": "#27445F",
-                      "icon_fill": "#1A3249",
-                      "icon_stroke": "#345A7C",
-                      "icon_text": "#93C5FD",
-                      "text_color": "#C8D8E8"
-                  },
-                  "APIs": {
-                      "icon": "{}",
-                      "chip_fill": "#122232",
-                      "chip_stroke": "#27445F",
-                      "icon_fill": "#1A3249",
-                      "icon_stroke": "#345A7C",
-                      "icon_text": "#93C5FD",
-                      "text_color": "#C8D8E8"
-                  },
-                  "AI": {
-                      "icon": "AI",
-                      "chip_fill": "#241529",
-                      "chip_stroke": "#4A2A55",
-                      "icon_fill": "#352042",
-                      "icon_stroke": "#6B3E7E",
-                      "icon_text": "#E9D5FF",
-                      "text_color": "#E5D5EF"
-                  },
-                  "Tools": {
-                      "icon": "T",
-                      "chip_fill": "#18211D",
-                      "chip_stroke": "#33493D",
-                      "icon_fill": "#223228",
-                      "icon_stroke": "#456152",
-                      "icon_text": "#BBF7D0",
-                      "text_color": "#D5E7DB"
-                  },
-                  "UX": {
-                      "icon": "UX",
-                      "chip_fill": "#1F1722",
-                      "chip_stroke": "#47314B",
-                      "icon_fill": "#312337",
-                      "icon_stroke": "#62486A",
-                      "icon_text": "#F5D0FE",
-                      "text_color": "#E6D6EA"
-                  },
-                  "Automation": {
-                      "icon": "A",
-                      "chip_fill": "#172118",
-                      "chip_stroke": "#334737",
-                      "icon_fill": "#233126",
-                      "icon_stroke": "#4A6450",
-                      "icon_text": "#BBF7D0",
-                      "text_color": "#D6E7DA"
-                  }
+                  "React":      {"fill": "#102338", "stroke": "#24405E", "icon_bg": "#17314A", "icon_stroke": "#34597A", "text": "#CFE7FF", "icon": "#7DD3FC"},
+                  "JavaScript": {"fill": "#211B0D", "stroke": "#4B4021", "icon_bg": "#3A3010", "icon_stroke": "#67561A", "text": "#F7E7A5", "icon": "#FDE68A"},
+                  "UI":         {"fill": "#15202E", "stroke": "#31465D", "icon_bg": "#22354A", "icon_stroke": "#46627F", "text": "#D7E7F7", "icon": "#93C5FD"},
+                  "Workers":    {"fill": "#251A12", "stroke": "#4B3627", "icon_bg": "#3B271B", "icon_stroke": "#6A4630", "text": "#F1D6C2", "icon": "#FDBA74"},
+                  "API":        {"fill": "#142331", "stroke": "#2F4C64", "icon_bg": "#1D3348", "icon_stroke": "#40617A", "text": "#D3E6F7", "icon": "#93C5FD"},
+                  "APIs":       {"fill": "#142331", "stroke": "#2F4C64", "icon_bg": "#1D3348", "icon_stroke": "#40617A", "text": "#D3E6F7", "icon": "#93C5FD"},
+                  "AI":         {"fill": "#23182A", "stroke": "#4A3055", "icon_bg": "#33213D", "icon_stroke": "#6A4379", "text": "#EADAF7", "icon": "#D8B4FE"},
+                  "Tools":      {"fill": "#17211C", "stroke": "#38483F", "icon_bg": "#243229", "icon_stroke": "#51675B", "text": "#D8EBDD", "icon": "#BBF7D0"},
+                  "UX":         {"fill": "#1F1821", "stroke": "#47364A", "icon_bg": "#302434", "icon_stroke": "#635169", "text": "#E9DDEA", "icon": "#F5D0FE"},
+                  "Automation": {"fill": "#18211A", "stroke": "#35493A", "icon_bg": "#24322A", "icon_stroke": "#4F6758", "text": "#D9EBDD", "icon": "#BBF7D0"},
               }
+              return styles.get(name, {"fill": "#102338", "stroke": "#24405E", "icon_bg": "#17314A", "icon_stroke": "#34597A", "text": "#CFE7FF", "icon": "#8FB7E8"})
 
-              return styles.get(text, {
-                  "icon": text[:1].upper(),
-                  "chip_fill": "#0F2238",
-                  "chip_stroke": "#223A57",
-                  "icon_fill": "#18324B",
-                  "icon_stroke": "#2D4C6D",
-                  "icon_text": "#8FB7E8",
-                  "text_color": "#C9D7E6"
-              })
+          def icon_svg(tag, x, y):
+              # icon area around 16x16
+              stroke = "none"
+              if tag == "React":
+                  return f'''
+                  <g transform="translate({x},{y})" fill="none" stroke="#7DD3FC" stroke-width="1.2" stroke-linecap="round">
+                    <ellipse cx="8" cy="8" rx="6.2" ry="2.8"/>
+                    <ellipse cx="8" cy="8" rx="6.2" ry="2.8" transform="rotate(60 8 8)"/>
+                    <ellipse cx="8" cy="8" rx="6.2" ry="2.8" transform="rotate(120 8 8)"/>
+                    <circle cx="8" cy="8" r="1.5" fill="#7DD3FC" stroke="none"/>
+                  </g>
+                  '''
+              elif tag == "JavaScript":
+                  return f'''
+                  <g transform="translate({x},{y})">
+                    <rect x="1.5" y="1.5" width="13" height="13" rx="3" fill="#FDE68A" opacity="0.18" stroke="#FDE68A" stroke-width="1"/>
+                    <path d="M6 5.2v4.6c0 1.6-.7 2.5-2.2 2.8" fill="none" stroke="#FDE68A" stroke-width="1.4" stroke-linecap="round"/>
+                    <path d="M9 10.7c.4.8 1.1 1.2 2.1 1.2 1 0 1.9-.4 1.9-1.3 0-.8-.5-1.1-1.6-1.5l-.8-.3c-1.3-.5-1.9-1.2-1.9-2.3 0-1.4 1.2-2.3 2.7-2.3 1.1 0 1.9.4 2.5 1.2" fill="none" stroke="#FDE68A" stroke-width="1.2" stroke-linecap="round"/>
+                  </g>
+                  '''
+              elif tag == "UI":
+                  return f'''
+                  <g transform="translate({x},{y})" fill="none" stroke="#93C5FD" stroke-width="1.2">
+                    <rect x="1.8" y="2.2" width="12.4" height="11.6" rx="2.2"/>
+                    <line x1="1.8" y1="6.2" x2="14.2" y2="6.2"/>
+                    <line x1="6.2" y1="6.2" x2="6.2" y2="13.8"/>
+                  </g>
+                  '''
+              elif tag == "Workers":
+                  return f'''
+                  <g transform="translate({x},{y})" fill="none" stroke="#FDBA74" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 11.5h9.2a2.8 2.8 0 0 0 0-5.6 4.2 4.2 0 0 0-7.9 1.1A2.6 2.6 0 0 0 3 11.5Z"/>
+                    <path d="M5.2 13.2h6.2"/>
+                  </g>
+                  '''
+              elif tag == "API" or tag == "APIs":
+                  return f'''
+                  <g transform="translate({x},{y})" fill="none" stroke="#93C5FD" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="3.2" cy="8" r="1.5"/>
+                    <circle cx="12.8" cy="3.2" r="1.5"/>
+                    <circle cx="12.8" cy="12.8" r="1.5"/>
+                    <path d="M4.7 7.3 11.3 3.9"/>
+                    <path d="M4.7 8.7 11.3 12.1"/>
+                  </g>
+                  '''
+              elif tag == "AI":
+                  return f'''
+                  <g transform="translate({x},{y})" fill="none" stroke="#D8B4FE" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M8 2.3 9.5 5.8 13 7.3 9.5 8.8 8 12.3 6.5 8.8 3 7.3 6.5 5.8Z"/>
+                    <path d="M12.2 10.8 12.8 12.2 14.2 12.8 12.8 13.4 12.2 14.8 11.6 13.4 10.2 12.8 11.6 12.2Z"/>
+                  </g>
+                  '''
+              elif tag == "Tools":
+                  return f'''
+                  <g transform="translate({x},{y})" fill="none" stroke="#BBF7D0" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10.8 2.8a3.2 3.2 0 0 0-3.7 4l-3.9 3.9a1.3 1.3 0 1 0 1.8 1.8l3.9-3.9a3.2 3.2 0 0 0 4-3.7l-2.1 2.1-2-2 2-2Z"/>
+                  </g>
+                  '''
+              elif tag == "UX":
+                  return f'''
+                  <g transform="translate({x},{y})" fill="none" stroke="#F5D0FE" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 2.6 11 9.6 7.4 10.2 9.2 13.6 7.5 14.4 5.8 11 3 13.2Z"/>
+                  </g>
+                  '''
+              elif tag == "Automation":
+                  return f'''
+                  <g transform="translate({x},{y})" fill="none" stroke="#BBF7D0" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="8" cy="8" r="2.1"/>
+                    <path d="M8 2.2v2"/>
+                    <path d="M8 11.8v2"/>
+                    <path d="M2.2 8h2"/>
+                    <path d="M11.8 8h2"/>
+                    <path d="M4 4l1.4 1.4"/>
+                    <path d="M10.6 10.6 12 12"/>
+                    <path d="M12 4l-1.4 1.4"/>
+                    <path d="M5.4 10.6 4 12"/>
+                  </g>
+                  '''
+              else:
+                  return f'''
+                  <g transform="translate({x},{y})" fill="none" stroke="#8FB7E8" stroke-width="1.2">
+                    <circle cx="8" cy="8" r="4.5"/>
+                  </g>
+                  '''
 
           def chip(x, y, text):
               style = tag_style(text)
               label = esc(text)
-              icon = esc(style["icon"])
-
-              width = max(88, 52 + len(text) * 8)
+              width = max(102, 52 + len(text) * 8)
 
               svg = f'''
               <g>
-                <rect x="{x}" y="{y}" width="{width}" height="30" rx="15"
-                      fill="{style["chip_fill"]}" stroke="{style["chip_stroke"]}" stroke-width="1"/>
+                <rect x="{x}" y="{y}" width="{width}" height="32" rx="16"
+                      fill="{style["fill"]}" stroke="{style["stroke"]}" stroke-width="1"/>
 
-                <rect x="{x + 8}" y="{y + 6}" width="18" height="18" rx="9"
-                      fill="{style["icon_fill"]}" stroke="{style["icon_stroke"]}" stroke-width="1"/>
+                <rect x="{x + 8}" y="{y + 7}" width="18" height="18" rx="9"
+                      fill="{style["icon_bg"]}" stroke="{style["icon_stroke"]}" stroke-width="1"/>
 
-                <text x="{x + 17}" y="{y + 18.5}" text-anchor="middle"
-                      fill="{style["icon_text"]}"
-                      font-family="Inter, Segoe UI, Arial, sans-serif"
-                      font-size="9" font-weight="800">{icon}</text>
+                {icon_svg(text, x + 9, y + 8)}
 
-                <text x="{x + 34}" y="{y + 20}"
-                      fill="{style["text_color"]}"
+                <text x="{x + 34}" y="{y + 21}"
+                      fill="{style["text"]}"
                       font-family="Inter, Segoe UI, Arial, sans-serif"
                       font-size="12" font-weight="600">{label}</text>
               </g>
               '''
-
               return svg, width
 
           def project_card(x, y, w, h, project):
               title = esc(project["title"])
-              desc_lines = wrap_text(project["desc"])
-
-              chips_svg = ""
-              cx = x + 24
-              cy = y + h - 50
-
-              for tag in project["tags"]:
-                  chip_svg, chip_w = chip(cx, cy, tag)
-                  chips_svg += chip_svg
-                  cx += chip_w + 10
+              desc_lines = wrap_text(project["desc"], max_chars=38, max_lines=2)
 
               desc_svg = render_multiline_text(
                   x + 24,
-                  y + 86,
-                  desc_lines
+                  y + 88,
+                  desc_lines,
+                  color="#B8C2CF",
+                  size=14,
+                  line_height=22
               )
+
+              chips_svg = ""
+              cx = x + 24
+              chip_y = y + h - 52
+
+              for tag in project["tags"]:
+                  chip_svg, chip_w = chip(cx, chip_y, tag)
+                  chips_svg += chip_svg
+                  cx += chip_w + 10
 
               return f'''
               <g>
@@ -279,14 +269,78 @@ jobs:
               '''
 
           cards = [
-              project_card(36, 124, 404, 172, projects[0]),
-              project_card(480, 124, 404, 172, projects[1]),
-              project_card(36, 322, 404, 172, projects[2]),
-              project_card(480, 322, 404, 172, projects[3]),
+              project_card(36, 126, 404, 178, projects[0]),
+              project_card(480, 126, 404, 178, projects[1]),
+              project_card(36, 330, 404, 178, projects[2]),
+              project_card(480, 330, 404, 178, projects[3]),
           ]
 
           svg = f'''<svg width="{WIDTH}" height="{HEIGHT}" viewBox="0 0 {WIDTH} {HEIGHT}" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="{WIDTH}" height="{HEIGHT}" rx="28" fill="#0A1018"/>
+            <rect x="1" y="1" width="{WIDTH - 2}" height="{HEIGHT - 2}" rx="27"
+                  stroke="#1D2A3A" stroke-width="1.5"/>
+
+            <rect x="36" y="32" width="8" height="52" rx="4" fill="#5FA8FF"/>
+
+            <text x="62" y="52" fill="#F2F6FA"
+                  font-family="Inter, Segoe UI, Arial, sans-serif"
+                  font-size="28" font-weight="800">
+              Project Showcase
+            </text>
+
+            <text x="62" y="76" fill="#8FA3B8"
+                  font-family="Inter, Segoe UI, Arial, sans-serif"
+                  font-size="14" font-weight="500">
+              selected builds, tools and experiments
+            </text>
+
+            <line x1="36" y1="100" x2="884" y2="100"
+                  stroke="#1E3148" stroke-width="2"/>
+
+            {''.join(cards)}
+
+            <text x="36" y="552" fill="#7E8B99"
+                  font-family="Inter, Segoe UI, Arial, sans-serif"
+                  font-size="12">
+              last update: {now}
+            </text>
+          </svg>'''
+
+          with open("assets/showcase.svg", "w", encoding="utf-8") as f:
+              f.write(svg)
+          PY
+
+      - name: Commit and push showcase card
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add assets/showcase.svg
+
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+
+          git commit -m "Update project showcase card"
+
+          for i in 1 2 3 4 5; do
+            git fetch origin main
+            git rebase origin/main
+
+            if git push origin HEAD:main; then
+              echo "Push successful"
+              exit 0
+            fi
+
+            echo "Push failed, retrying in 5 seconds..."
+            git rebase --abort || true
+            git reset --hard origin/main
+            sleep 5
+          done
+
+          echo "Push failed after retries"
+          exit 1<rect width="{WIDTH}" height="{HEIGHT}" rx="28" fill="#0A1018"/>
             <rect x="1" y="1" width="{WIDTH - 2}" height="{HEIGHT - 2}" rx="27"
                   stroke="#1D2A3A" stroke-width="1.5"/>
 
