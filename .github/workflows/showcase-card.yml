@@ -1,4 +1,4 @@
-name: Update Project Showcase Card
+name: Update Pixel Profile Assets
 
 on:
   schedule:
@@ -9,11 +9,11 @@ permissions:
   contents: write
 
 concurrency:
-  group: showcase-card-${{ github.ref }}
+  group: pixel-assets-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  generate-showcase:
+  build-assets:
     runs-on: ubuntu-latest
 
     steps:
@@ -29,7 +29,7 @@ jobs:
           git fetch origin main
           git reset --hard origin/main
 
-      - name: Generate showcase SVG
+      - name: Generate pixel assets
         run: |
           mkdir -p assets
 
@@ -63,21 +63,18 @@ jobs:
               }
           ]
 
-          WIDTH = 920
-          HEIGHT = 590
-
           def esc(text):
               return html.escape(text)
 
-          def wrap_text(text, max_chars=38, max_lines=2):
+          def wrap_text(text, max_chars=34, max_lines=2):
               words = text.split()
               lines = []
               current = ""
 
               for word in words:
-                  candidate = word if not current else current + " " + word
-                  if len(candidate) <= max_chars:
-                      current = candidate
+                  test = word if not current else current + " " + word
+                  if len(test) <= max_chars:
+                      current = test
                   else:
                       if current:
                           lines.append(current)
@@ -88,245 +85,287 @@ jobs:
 
               if len(lines) > max_lines:
                   lines = lines[:max_lines]
-                  if len(lines[-1]) > max_chars - 3:
-                      lines[-1] = lines[-1][:max_chars - 3].rstrip()
-                  lines[-1] += "..."
+                  lines[-1] = lines[-1][:max_chars - 3].rstrip() + "..."
 
               return lines
 
-          def render_multiline_text(x, y, lines, color="#B8C2CF", size=14, line_height=22):
-              result = f'''
-              <text x="{x}" y="{y}" fill="{color}"
-                    font-family="Inter, Segoe UI, Arial, sans-serif"
-                    font-size="{size}" font-weight="400">
-              '''
+          def text_block(x, y, lines, color="#D8E7D0", size=11, line_height=16, css_class="pixel-small"):
+              out = [f'<text x="{x}" y="{y}" class="{css_class}" fill="{color}" font-size="{size}">']
               for i, line in enumerate(lines):
-                  dy = 0 if i == 0 else line_height
-                  result += f'<tspan x="{x}" dy="{dy}">{esc(line)}</tspan>'
-              result += "</text>"
-              return result
+                  if i == 0:
+                      out.append(f'<tspan x="{x}" dy="0">{esc(line)}</tspan>')
+                  else:
+                      out.append(f'<tspan x="{x}" dy="{line_height}">{esc(line)}</tspan>')
+              out.append('</text>')
+              return "".join(out)
 
-          def tag_style(name):
-              styles = {
-                  "React":      {"fill": "#102338", "stroke": "#24405E", "icon_bg": "#17314A", "icon_stroke": "#34597A", "text": "#CFE7FF", "icon": "#7DD3FC"},
-                  "JavaScript": {"fill": "#211B0D", "stroke": "#4B4021", "icon_bg": "#3A3010", "icon_stroke": "#67561A", "text": "#F7E7A5", "icon": "#FDE68A"},
-                  "UI":         {"fill": "#15202E", "stroke": "#31465D", "icon_bg": "#22354A", "icon_stroke": "#46627F", "text": "#D7E7F7", "icon": "#93C5FD"},
-                  "Workers":    {"fill": "#251A12", "stroke": "#4B3627", "icon_bg": "#3B271B", "icon_stroke": "#6A4630", "text": "#F1D6C2", "icon": "#FDBA74"},
-                  "API":        {"fill": "#142331", "stroke": "#2F4C64", "icon_bg": "#1D3348", "icon_stroke": "#40617A", "text": "#D3E6F7", "icon": "#93C5FD"},
-                  "APIs":       {"fill": "#142331", "stroke": "#2F4C64", "icon_bg": "#1D3348", "icon_stroke": "#40617A", "text": "#D3E6F7", "icon": "#93C5FD"},
-                  "AI":         {"fill": "#23182A", "stroke": "#4A3055", "icon_bg": "#33213D", "icon_stroke": "#6A4379", "text": "#EADAF7", "icon": "#D8B4FE"},
-                  "Tools":      {"fill": "#17211C", "stroke": "#38483F", "icon_bg": "#243229", "icon_stroke": "#51675B", "text": "#D8EBDD", "icon": "#BBF7D0"},
-                  "UX":         {"fill": "#1F1821", "stroke": "#47364A", "icon_bg": "#302434", "icon_stroke": "#635169", "text": "#E9DDEA", "icon": "#F5D0FE"},
-                  "Automation": {"fill": "#18211A", "stroke": "#35493A", "icon_bg": "#24322A", "icon_stroke": "#4F6758", "text": "#D9EBDD", "icon": "#BBF7D0"},
+          def tag_palette(tag):
+              palettes = {
+                  "React":      {"bg":"#123048","border":"#2d5f7a","text":"#bfefff","icon":"#7ed7ff"},
+                  "JavaScript": {"bg":"#3A300C","border":"#796419","text":"#f6e7a4","icon":"#f7dc6f"},
+                  "UI":         {"bg":"#1f2f3f","border":"#4b6478","text":"#d8ecff","icon":"#9cc8ff"},
+                  "Workers":    {"bg":"#4A2B12","border":"#8E5B2D","text":"#ffd8b0","icon":"#ffb36a"},
+                  "API":        {"bg":"#173447","border":"#386887","text":"#d7efff","icon":"#91cbff"},
+                  "APIs":       {"bg":"#173447","border":"#386887","text":"#d7efff","icon":"#91cbff"},
+                  "AI":         {"bg":"#3B1F42","border":"#704087","text":"#efd9ff","icon":"#d8a7ff"},
+                  "Tools":      {"bg":"#1f3324","border":"#4c7757","text":"#d9f4df","icon":"#98e4a9"},
+                  "UX":         {"bg":"#3c2632","border":"#7f5369","text":"#f2dde8","icon":"#f4b7d3"},
+                  "Automation": {"bg":"#22351E","border":"#547851","text":"#dff4da","icon":"#9ee19a"},
               }
-              return styles.get(name, {"fill": "#102338", "stroke": "#24405E", "icon_bg": "#17314A", "icon_stroke": "#34597A", "text": "#CFE7FF", "icon": "#8FB7E8"})
+              return palettes.get(tag, {"bg":"#223042","border":"#526981","text":"#deebf7","icon":"#9bc2e8"})
 
-          def icon_svg(tag, x, y):
-              # icon area around 16x16
-              stroke = "none"
+          def icon_svg(tag, x, y, color):
               if tag == "React":
                   return f'''
-                  <g transform="translate({x},{y})" fill="none" stroke="#7DD3FC" stroke-width="1.2" stroke-linecap="round">
-                    <ellipse cx="8" cy="8" rx="6.2" ry="2.8"/>
-                    <ellipse cx="8" cy="8" rx="6.2" ry="2.8" transform="rotate(60 8 8)"/>
-                    <ellipse cx="8" cy="8" rx="6.2" ry="2.8" transform="rotate(120 8 8)"/>
-                    <circle cx="8" cy="8" r="1.5" fill="#7DD3FC" stroke="none"/>
+                  <g transform="translate({x},{y})" fill="none" stroke="{color}" stroke-width="1.2" stroke-linecap="square">
+                    <ellipse cx="8" cy="8" rx="6" ry="2.8"/>
+                    <ellipse cx="8" cy="8" rx="6" ry="2.8" transform="rotate(60 8 8)"/>
+                    <ellipse cx="8" cy="8" rx="6" ry="2.8" transform="rotate(120 8 8)"/>
+                    <rect x="6.6" y="6.6" width="2.8" height="2.8" fill="{color}" stroke="none"/>
                   </g>
                   '''
-              elif tag == "JavaScript":
+              if tag == "JavaScript":
                   return f'''
-                  <g transform="translate({x},{y})">
-                    <rect x="1.5" y="1.5" width="13" height="13" rx="3" fill="#FDE68A" opacity="0.18" stroke="#FDE68A" stroke-width="1"/>
-                    <path d="M6 5.2v4.6c0 1.6-.7 2.5-2.2 2.8" fill="none" stroke="#FDE68A" stroke-width="1.4" stroke-linecap="round"/>
-                    <path d="M9 10.7c.4.8 1.1 1.2 2.1 1.2 1 0 1.9-.4 1.9-1.3 0-.8-.5-1.1-1.6-1.5l-.8-.3c-1.3-.5-1.9-1.2-1.9-2.3 0-1.4 1.2-2.3 2.7-2.3 1.1 0 1.9.4 2.5 1.2" fill="none" stroke="#FDE68A" stroke-width="1.2" stroke-linecap="round"/>
+                  <g transform="translate({x},{y})" fill="none" stroke="{color}" stroke-width="1.2" stroke-linecap="square" stroke-linejoin="miter">
+                    <rect x="2" y="2" width="12" height="12"/>
+                    <path d="M6 5v4.2c0 1.3-.7 2-1.9 2.3"/>
+                    <path d="M9 10.2c.5.8 1.2 1.1 2.1 1.1 1 0 1.7-.4 1.7-1.2 0-.7-.4-1-1.5-1.3l-.7-.2c-1.2-.4-1.8-1-1.8-2.1 0-1.2 1-2 2.3-2 .9 0 1.6.3 2.1 1"/>
                   </g>
                   '''
-              elif tag == "UI":
+              if tag == "UI":
                   return f'''
-                  <g transform="translate({x},{y})" fill="none" stroke="#93C5FD" stroke-width="1.2">
-                    <rect x="1.8" y="2.2" width="12.4" height="11.6" rx="2.2"/>
-                    <line x1="1.8" y1="6.2" x2="14.2" y2="6.2"/>
-                    <line x1="6.2" y1="6.2" x2="6.2" y2="13.8"/>
+                  <g transform="translate({x},{y})" fill="none" stroke="{color}" stroke-width="1.2" stroke-linecap="square">
+                    <rect x="2" y="2.5" width="12" height="11"/>
+                    <line x1="2" y1="6.2" x2="14" y2="6.2"/>
+                    <line x1="6.5" y1="6.2" x2="6.5" y2="13.5"/>
                   </g>
                   '''
-              elif tag == "Workers":
+              if tag == "Workers":
                   return f'''
-                  <g transform="translate({x},{y})" fill="none" stroke="#FDBA74" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M3 11.5h9.2a2.8 2.8 0 0 0 0-5.6 4.2 4.2 0 0 0-7.9 1.1A2.6 2.6 0 0 0 3 11.5Z"/>
-                    <path d="M5.2 13.2h6.2"/>
+                  <g transform="translate({x},{y})" fill="none" stroke="{color}" stroke-width="1.2" stroke-linecap="square">
+                    <path d="M3.2 11.5h9.3a2.8 2.8 0 0 0 0-5.6 4 4 0 0 0-7.7 1.1A2.6 2.6 0 0 0 3.2 11.5Z"/>
+                    <line x1="4.8" y1="13.2" x2="11.5" y2="13.2"/>
                   </g>
                   '''
-              elif tag == "API" or tag == "APIs":
+              if tag == "API" or tag == "APIs":
                   return f'''
-                  <g transform="translate({x},{y})" fill="none" stroke="#93C5FD" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="3.2" cy="8" r="1.5"/>
-                    <circle cx="12.8" cy="3.2" r="1.5"/>
-                    <circle cx="12.8" cy="12.8" r="1.5"/>
-                    <path d="M4.7 7.3 11.3 3.9"/>
-                    <path d="M4.7 8.7 11.3 12.1"/>
+                  <g transform="translate({x},{y})" fill="none" stroke="{color}" stroke-width="1.2" stroke-linecap="square">
+                    <rect x="2" y="6.8" width="2.4" height="2.4"/>
+                    <rect x="11.6" y="2" width="2.4" height="2.4"/>
+                    <rect x="11.6" y="11.6" width="2.4" height="2.4"/>
+                    <line x1="4.4" y1="8" x2="11.6" y2="3.8"/>
+                    <line x1="4.4" y1="8" x2="11.6" y2="12.8"/>
                   </g>
                   '''
-              elif tag == "AI":
+              if tag == "AI":
                   return f'''
-                  <g transform="translate({x},{y})" fill="none" stroke="#D8B4FE" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M8 2.3 9.5 5.8 13 7.3 9.5 8.8 8 12.3 6.5 8.8 3 7.3 6.5 5.8Z"/>
-                    <path d="M12.2 10.8 12.8 12.2 14.2 12.8 12.8 13.4 12.2 14.8 11.6 13.4 10.2 12.8 11.6 12.2Z"/>
+                  <g transform="translate({x},{y})" fill="none" stroke="{color}" stroke-width="1.2" stroke-linecap="square">
+                    <path d="M8 2.8 9.6 6.2 13 7.8 9.6 9.4 8 12.8 6.4 9.4 3 7.8 6.4 6.2Z"/>
+                    <path d="M12.2 11.2 12.8 12.6 14.2 13.2 12.8 13.8 12.2 15.2 11.6 13.8 10.2 13.2 11.6 12.6Z"/>
                   </g>
                   '''
-              elif tag == "Tools":
+              if tag == "Tools":
                   return f'''
-                  <g transform="translate({x},{y})" fill="none" stroke="#BBF7D0" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M10.8 2.8a3.2 3.2 0 0 0-3.7 4l-3.9 3.9a1.3 1.3 0 1 0 1.8 1.8l3.9-3.9a3.2 3.2 0 0 0 4-3.7l-2.1 2.1-2-2 2-2Z"/>
+                  <g transform="translate({x},{y})" fill="none" stroke="{color}" stroke-width="1.2" stroke-linecap="square">
+                    <path d="M10.8 3a3 3 0 0 0-3.5 3.8L3.4 10.7a1.1 1.1 0 1 0 1.6 1.6l3.9-3.9a3 3 0 0 0 3.8-3.5l-2 2-2-2Z"/>
                   </g>
                   '''
-              elif tag == "UX":
+              if tag == "UX":
                   return f'''
-                  <g transform="translate({x},{y})" fill="none" stroke="#F5D0FE" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M3 2.6 11 9.6 7.4 10.2 9.2 13.6 7.5 14.4 5.8 11 3 13.2Z"/>
+                  <g transform="translate({x},{y})" fill="none" stroke="{color}" stroke-width="1.2" stroke-linecap="square">
+                    <path d="M3 3l8 7-3.4.8 1.8 3.2-1.6.8-1.8-3.3L3 13.4Z"/>
                   </g>
                   '''
-              elif tag == "Automation":
+              if tag == "Automation":
                   return f'''
-                  <g transform="translate({x},{y})" fill="none" stroke="#BBF7D0" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="8" cy="8" r="2.1"/>
-                    <path d="M8 2.2v2"/>
-                    <path d="M8 11.8v2"/>
-                    <path d="M2.2 8h2"/>
-                    <path d="M11.8 8h2"/>
-                    <path d="M4 4l1.4 1.4"/>
-                    <path d="M10.6 10.6 12 12"/>
-                    <path d="M12 4l-1.4 1.4"/>
-                    <path d="M5.4 10.6 4 12"/>
+                  <g transform="translate({x},{y})" fill="none" stroke="{color}" stroke-width="1.2" stroke-linecap="square">
+                    <rect x="6.2" y="6.2" width="3.6" height="3.6"/>
+                    <line x1="8" y1="2.2" x2="8" y2="4.4"/>
+                    <line x1="8" y1="11.6" x2="8" y2="13.8"/>
+                    <line x1="2.2" y1="8" x2="4.4" y2="8"/>
+                    <line x1="11.6" y1="8" x2="13.8" y2="8"/>
+                    <line x1="4.1" y1="4.1" x2="5.5" y2="5.5"/>
+                    <line x1="10.5" y1="10.5" x2="11.9" y2="11.9"/>
+                    <line x1="11.9" y1="4.1" x2="10.5" y2="5.5"/>
+                    <line x1="5.5" y1="10.5" x2="4.1" y2="11.9"/>
                   </g>
                   '''
-              else:
-                  return f'''
-                  <g transform="translate({x},{y})" fill="none" stroke="#8FB7E8" stroke-width="1.2">
-                    <circle cx="8" cy="8" r="4.5"/>
-                  </g>
-                  '''
+              return f'<rect x="{x+4}" y="{y+4}" width="8" height="8" fill="{color}"/>'
 
-          def chip(x, y, text):
-              style = tag_style(text)
-              label = esc(text)
-              width = max(102, 52 + len(text) * 8)
-
-              svg = f'''
+          def chip(x, y, tag):
+              pal = tag_palette(tag)
+              width = max(94, 54 + len(tag) * 7)
+              return f'''
               <g>
-                <rect x="{x}" y="{y}" width="{width}" height="32" rx="16"
-                      fill="{style["fill"]}" stroke="{style["stroke"]}" stroke-width="1"/>
-
-                <rect x="{x + 8}" y="{y + 7}" width="18" height="18" rx="9"
-                      fill="{style["icon_bg"]}" stroke="{style["icon_stroke"]}" stroke-width="1"/>
-
-                {icon_svg(text, x + 9, y + 8)}
-
-                <text x="{x + 34}" y="{y + 21}"
-                      fill="{style["text"]}"
-                      font-family="Inter, Segoe UI, Arial, sans-serif"
-                      font-size="12" font-weight="600">{label}</text>
+                <rect x="{x}" y="{y}" width="{width}" height="30" fill="{pal["bg"]}" stroke="{pal["border"]}" stroke-width="2"/>
+                <rect x="{x+8}" y="{y+7}" width="16" height="16" fill="#11181f" stroke="{pal["border"]}" stroke-width="1"/>
+                {icon_svg(tag, x+8, y+7, pal["icon"])}
+                <text x="{x+32}" y="{y+19}" class="pixel-small" fill="{pal["text"]}" font-size="10">{esc(tag)}</text>
               </g>
-              '''
-              return svg, width
+              ''', width
+
+          def project_icon(kind, x, y):
+              color = "#82c7ff"
+              if kind == "MRPSite":
+                  return f'''
+                  <g transform="translate({x},{y})" fill="none" stroke="{color}" stroke-width="1.5" stroke-linecap="square">
+                    <rect x="2" y="2" width="12" height="10"/>
+                    <line x1="6" y1="13.5" x2="10" y2="13.5"/>
+                    <line x1="8" y1="12" x2="8" y2="13.5"/>
+                  </g>
+                  '''
+              if kind == "AI Moderation Worker":
+                  return f'''
+                  <g transform="translate({x},{y})" fill="none" stroke="{color}" stroke-width="1.5" stroke-linecap="square">
+                    <path d="M8 2.5 13 4.5v4c0 3-2.1 4.7-5 6-2.9-1.3-5-3-5-6v-4Z"/>
+                    <line x1="5.5" y1="8" x2="7.2" y2="9.7"/>
+                    <line x1="7.2" y1="9.7" x2="10.8" y2="6.1"/>
+                  </g>
+                  '''
+              if kind == "Window Translator":
+                  return f'''
+                  <g transform="translate({x},{y})" fill="none" stroke="{color}" stroke-width="1.4" stroke-linecap="square">
+                    <line x1="3" y1="4" x2="9" y2="4"/>
+                    <line x1="4.5" y1="4" x2="4.5" y2="12"/>
+                    <line x1="9" y1="4" x2="6" y2="12"/>
+                    <line x1="10.5" y1="4.5" x2="13.5" y2="4.5"/>
+                    <line x1="12" y1="3" x2="12" y2="11"/>
+                    <line x1="10.5" y1="11.5" x2="13.5" y2="11.5"/>
+                  </g>
+                  '''
+              if kind == "Serverless Tools":
+                  return f'''
+                  <g transform="translate({x},{y})" fill="none" stroke="{color}" stroke-width="1.4" stroke-linecap="square">
+                    <rect x="2.5" y="8" width="11" height="4"/>
+                    <line x1="5" y1="4" x2="5" y2="8"/>
+                    <line x1="11" y1="4" x2="11" y2="8"/>
+                    <line x1="3.5" y1="12" x2="3.5" y2="14"/>
+                    <line x1="12.5" y1="12" x2="12.5" y2="14"/>
+                  </g>
+                  '''
+              return f'<rect x="{x}" y="{y}" width="16" height="16" fill="{color}"/>'
 
           def project_card(x, y, w, h, project):
-              title = esc(project["title"])
-              desc_lines = wrap_text(project["desc"], max_chars=38, max_lines=2)
+              title = project["title"]
+              desc_lines = wrap_text(project["desc"], max_chars=34, max_lines=2)
 
-              desc_svg = render_multiline_text(
-                  x + 24,
-                  y + 88,
-                  desc_lines,
-                  color="#B8C2CF",
-                  size=14,
-                  line_height=22
-              )
-
-              chips_svg = ""
-              cx = x + 24
-              chip_y = y + h - 52
-
+              chips = []
+              cx = x + 20
+              cy = y + h - 42
               for tag in project["tags"]:
-                  chip_svg, chip_w = chip(cx, chip_y, tag)
-                  chips_svg += chip_svg
-                  cx += chip_w + 10
+                  chip_svg, chip_w = chip(cx, cy, tag)
+                  chips.append(chip_svg)
+                  cx += chip_w + 8
 
               return f'''
               <g>
-                <rect x="{x}" y="{y}" width="{w}" height="{h}" rx="22"
-                      fill="#0D1522" stroke="#243447" stroke-width="1.2"/>
+                <rect x="{x}" y="{y}" width="{w}" height="{h}" fill="#1b1b1b" stroke="#3b4a3f" stroke-width="3"/>
+                <rect x="{x+4}" y="{y+4}" width="{w-8}" height="{h-8}" fill="#11161a" stroke="#1f2b22" stroke-width="1"/>
 
-                <circle cx="{x + 26}" cy="{y + 30}" r="5" fill="#5FA8FF"/>
+                <rect x="{x+16}" y="{y+14}" width="20" height="20" fill="#1a232b" stroke="#3b5562" stroke-width="2"/>
+                {project_icon(title, x+18, y+16)}
 
-                <text x="{x + 44}" y="{y + 36}" fill="#EAF1F8"
-                      font-family="Inter, Segoe UI, Arial, sans-serif"
-                      font-size="18" font-weight="800">{title}</text>
+                <text x="{x+46}" y="{y+30}" class="pixel" fill="#f3f7ef" font-size="16">{esc(title)}</text>
 
-                {desc_svg}
+                {text_block(x+20, y+64, desc_lines, color="#d1dbc8", size=11, line_height=16, css_class="pixel-small")}
 
-                {chips_svg}
+                {''.join(chips)}
               </g>
               '''
 
-          cards = [
-              project_card(36, 126, 404, 178, projects[0]),
-              project_card(480, 126, 404, 178, projects[1]),
-              project_card(36, 330, 404, 178, projects[2]),
-              project_card(480, 330, 404, 178, projects[3]),
-          ]
+          header_svg = f'''<svg width="980" height="220" viewBox="0 0 980 220" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+            <style>
+              .pixel {{
+                font-family: "Press Start 2P", "Courier New", monospace;
+                letter-spacing: 0.2px;
+              }}
+              .pixel-small {{
+                font-family: "Press Start 2P", "Courier New", monospace;
+                letter-spacing: 0px;
+              }}
+            </style>
 
-          svg = f'''<svg width="{WIDTH}" height="{HEIGHT}" viewBox="0 0 {WIDTH} {HEIGHT}" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="{WIDTH}" height="{HEIGHT}" rx="28" fill="#0A1018"/>
-            <rect x="1" y="1" width="{WIDTH - 2}" height="{HEIGHT - 2}" rx="27"
-                  stroke="#1D2A3A" stroke-width="1.5"/>
+            <rect width="980" height="220" fill="#101510"/>
+            <rect x="0" y="0" width="980" height="28" fill="#6aa84f"/>
+            <rect x="0" y="28" width="980" height="20" fill="#5b3a1e"/>
+            <rect x="10" y="58" width="960" height="152" fill="#1b1b1b" stroke="#3f4d42" stroke-width="4"/>
+            <rect x="18" y="66" width="944" height="136" fill="#11161a" stroke="#202a22" stroke-width="2"/>
 
-            <rect x="36" y="32" width="8" height="52" rx="4" fill="#5FA8FF"/>
+            <rect x="42" y="92" width="24" height="24" fill="#7bd389" stroke="#24492c" stroke-width="2"/>
+            <rect x="70" y="92" width="24" height="24" fill="#82c7ff" stroke="#274c63" stroke-width="2"/>
+            <rect x="98" y="92" width="24" height="24" fill="#ffd966" stroke="#6f5d16" stroke-width="2"/>
 
-            <text x="62" y="52" fill="#F2F6FA"
-                  font-family="Inter, Segoe UI, Arial, sans-serif"
-                  font-size="28" font-weight="800">
-              Project Showcase
-            </text>
+            <text x="42" y="148" class="pixel" fill="#f3f7ef" font-size="28">SEMOOF</text>
+            <text x="42" y="176" class="pixel-small" fill="#b7c8b0" font-size="12">web developer • serverless tools • ai experiments</text>
 
-            <text x="62" y="76" fill="#8FA3B8"
-                  font-family="Inter, Segoe UI, Arial, sans-serif"
-                  font-size="14" font-weight="500">
-              selected builds, tools and experiments
-            </text>
-
-            <line x1="36" y1="100" x2="884" y2="100"
-                  stroke="#1E3148" stroke-width="2"/>
-
-            {''.join(cards)}
-
-            <text x="36" y="552" fill="#7E8B99"
-                  font-family="Inter, Segoe UI, Arial, sans-serif"
-                  font-size="12">
-              last update: {now}
-            </text>
+            <rect x="650" y="90" width="260" height="88" fill="#151d16" stroke="#456247" stroke-width="3"/>
+            <text x="670" y="116" class="pixel-small" fill="#8fd17b" font-size="11">PLAYER</text>
+            <text x="670" y="136" class="pixel-small" fill="#eef7e8" font-size="11">Semoof / None116</text>
+            <text x="670" y="158" class="pixel-small" fill="#8fd17b" font-size="11">MODE</text>
+            <text x="670" y="178" class="pixel-small" fill="#eef7e8" font-size="11">private repos, public grind</text>
           </svg>'''
 
+          showcase_cards = [
+              project_card(36, 126, 404, 182, projects[0]),
+              project_card(480, 126, 404, 182, projects[1]),
+              project_card(36, 334, 404, 182, projects[2]),
+              project_card(480, 334, 404, 182, projects[3]),
+          ]
+
+          showcase_svg = f'''<svg width="920" height="590" viewBox="0 0 920 590" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+            <style>
+              .pixel {{
+                font-family: "Press Start 2P", "Courier New", monospace;
+                letter-spacing: 0.2px;
+              }}
+              .pixel-small {{
+                font-family: "Press Start 2P", "Courier New", monospace;
+                letter-spacing: 0px;
+              }}
+            </style>
+
+            <rect width="920" height="590" fill="#101510"/>
+            <rect x="0" y="0" width="920" height="26" fill="#6aa84f"/>
+            <rect x="0" y="26" width="920" height="16" fill="#5b3a1e"/>
+
+            <rect x="12" y="54" width="896" height="524" fill="#1b1b1b" stroke="#3f4d42" stroke-width="4"/>
+            <rect x="20" y="62" width="880" height="508" fill="#0f1417" stroke="#212b21" stroke-width="2"/>
+
+            <rect x="36" y="86" width="10" height="34" fill="#7bd389"/>
+            <text x="62" y="108" class="pixel" fill="#f3f7ef" font-size="18">PROJECT SHOWCASE</text>
+            <text x="62" y="130" class="pixel-small" fill="#b7c8b0" font-size="10">selected builds, tools and experiments</text>
+
+            <rect x="36" y="148" width="848" height="4" fill="#334238"/>
+
+            {''.join(showcase_cards)}
+
+            <text x="36" y="548" class="pixel-small" fill="#9ca99c" font-size="10">last update: {now}</text>
+          </svg>'''
+
+          with open("assets/mc-header.svg", "w", encoding="utf-8") as f:
+              f.write(header_svg)
+
           with open("assets/showcase.svg", "w", encoding="utf-8") as f:
-              f.write(svg)
+              f.write(showcase_svg)
           PY
 
-      - name: Commit and push showcase card
+      - name: Commit and push assets
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add assets/showcase.svg
+          git add assets/mc-header.svg assets/showcase.svg
 
           if git diff --cached --quiet; then
             echo "No changes"
             exit 0
           fi
 
-          git commit -m "Update project showcase card"
+          git commit -m "Update pixel profile assets"
 
           for i in 1 2 3 4 5; do
             git fetch origin main
-            git rebase origin/main
+            git rebase origin/main || true
 
             if git push origin HEAD:main; then
               echo "Push successful"
