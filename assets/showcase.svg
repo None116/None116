@@ -1,124 +1,124 @@
-<svg width="940" height="600" viewBox="0 0 940 600" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="940" height="600" rx="30" fill="#050505"/>
-  <rect x="1" y="1" width="938" height="598" rx="29"
+<svg width="960" height="620" viewBox="0 0 960 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="620" rx="30" fill="#050505"/>
+  <rect x="1" y="1" width="958" height="618" rx="29"
         stroke="#2A2A2A" stroke-width="1.5"/>
 
-  <rect x="36" y="34" width="8" height="50" rx="4" fill="#F5F5F5"/>
+  <rect x="40" y="34" width="8" height="50" rx="4" fill="#F5F5F5"/>
 
-  <text x="62" y="54" fill="#F5F5F5"
+  <text x="66" y="54" fill="#F5F5F5"
         font-family="Inter, Segoe UI, Arial, sans-serif"
         font-size="29" font-weight="900">
     Project Showcase
   </text>
 
-  <text x="62" y="78" fill="#A8A8A8"
+  <text x="66" y="78" fill="#A8A8A8"
         font-family="Inter, Segoe UI, Arial, sans-serif"
         font-size="14" font-weight="500">
     selected builds, tools and experiments
   </text>
 
-  <line x1="36" y1="100" x2="904" y2="100"
+  <line x1="40" y1="100" x2="920" y2="100"
         stroke="#242424" stroke-width="2"/>
 
   
     <g>
-      <rect x="36" y="122" width="414" height="190" rx="22"
+      <rect x="40" y="124" width="420" height="198" rx="22"
             fill="#0F0F0F" stroke="#2B2B2B" stroke-width="1.5"/>
 
-      <rect x="54" y="142" width="28" height="28" rx="9"
+      <rect x="64" y="148" width="28" height="28" rx="9"
             fill="#050505" stroke="#3A3A3A" stroke-width="1"/>
 
       
-        <svg x="60" y="148" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="3" y="4" width="18" height="12" rx="2" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M8 20h8" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M12 16v4" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <svg x="70" y="154" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="3" y="4" width="18" height="12" rx="2" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M8 20h8" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 16v4" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         
 
-      <text x="94" y="161" fill="#F5F5F5"
+      <text x="104" y="168" fill="#F5F5F5"
             font-family="Inter, Segoe UI, Arial, sans-serif"
             font-size="18" font-weight="900">MRPSite</text>
 
       
     <g>
-      <rect x="352" y="144" width="77" height="24" rx="12"
+      <rect x="360" y="152" width="77" height="24" rx="12"
             fill="#111111" stroke="#4A4A4A" stroke-width="1"/>
-      <text x="390.5" y="160" text-anchor="middle"
-            fill="#EDEDED"
+      <text x="398.5" y="168" text-anchor="middle"
+            fill="#F0F0F0"
             font-family="Inter, Segoe UI, Arial, sans-serif"
             font-size="10" font-weight="800">PRIVATE</text>
     </g>
     
       
     <g>
-      <rect x="60" y="180" width="76" height="24" rx="12"
+      <rect x="64" y="190" width="76" height="24" rx="12"
             fill="#111111" stroke="#4A4A4A" stroke-width="1"/>
-      <text x="98.0" y="196" text-anchor="middle"
-            fill="#EDEDED"
+      <text x="102.0" y="206" text-anchor="middle"
+            fill="#F0F0F0"
             font-family="Inter, Segoe UI, Arial, sans-serif"
             font-size="10" font-weight="800">ACTIVE</text>
     </g>
     
 
       
-    <text x="60" y="230" fill="#B8B8B8"
+    <text x="64" y="242" fill="#BDBDBD"
           font-family="Inter, Segoe UI, Arial, sans-serif"
           font-size="14" font-weight="400">
-    <tspan x="60" dy="0">Clean web interface with polished layouts</tspan><tspan x="60" dy="22">and UI logic.</tspan></text>
+    <tspan x="64" dy="0">Clean web interface with polished layouts</tspan><tspan x="64" dy="22">and UI logic.</tspan></text>
 
       
     <g>
-      <rect x="60" y="260" width="102" height="34" rx="17"
+      <rect x="64" y="270" width="100" height="34" rx="17"
             fill="#151515" stroke="#3A3A3A" stroke-width="1.2"/>
 
       
-        <svg x="73" y="269" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <ellipse cx="12" cy="12" rx="9" ry="4" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <ellipse cx="12" cy="12" rx="9" ry="4" transform="rotate(60 12 12)" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <ellipse cx="12" cy="12" rx="9" ry="4" transform="rotate(120 12 12)" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="12" cy="12" r="2" fill="#EDEDED"/>
+        <svg x="80" y="279" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="12" cy="12" rx="9" ry="4" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <ellipse cx="12" cy="12" rx="9" ry="4" transform="rotate(60 12 12)" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <ellipse cx="12" cy="12" rx="9" ry="4" transform="rotate(120 12 12)" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="12" cy="12" r="2" fill="#F2F2F2"/>
         </svg>
         
 
-      <text x="98" y="282"
-            fill="#EDEDED"
+      <text x="106" y="292"
+            fill="#F0F0F0"
             font-family="Inter, Segoe UI, Arial, sans-serif"
             font-size="12" font-weight="700">React</text>
     </g>
     
     <g>
-      <rect x="172" y="260" width="124" height="34" rx="17"
+      <rect x="174" y="270" width="128" height="34" rx="17"
             fill="#151515" stroke="#3A3A3A" stroke-width="1.2"/>
 
       
-        <svg x="185" y="269" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="4" y="4" width="16" height="16" rx="2" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M8 9v5.5c0 1.2-.7 2-2 2.2" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M13 16c.5.6 1.2.9 2.1.9 1.1 0 1.9-.5 1.9-1.4 0-.8-.5-1.2-1.7-1.6l-.8-.2c-1.2-.4-1.8-1.1-1.8-2.2 0-1.3 1.1-2.2 2.5-2.2.9 0 1.7.3 2.3 1" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <svg x="190" y="279" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="4" y="4" width="16" height="16" rx="2" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M9 9v6c0 1.2-.7 2-2 2" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M14 17c1.8.3 3-.4 3-1.7 0-1-.6-1.4-2-1.8-1.3-.4-2-1-2-2.2 0-1.4 1.1-2.3 2.7-2.3.9 0 1.7.3 2.3.9" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         
 
-      <text x="210" y="282"
-            fill="#EDEDED"
+      <text x="216" y="292"
+            fill="#F0F0F0"
             font-family="Inter, Segoe UI, Arial, sans-serif"
             font-size="12" font-weight="700">JavaScript</text>
     </g>
     
     <g>
-      <rect x="306" y="260" width="102" height="34" rx="17"
+      <rect x="312" y="270" width="100" height="34" rx="17"
             fill="#151515" stroke="#3A3A3A" stroke-width="1.2"/>
 
       
-        <svg x="319" y="269" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="4" y="5" width="16" height="14" rx="2" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M4 9h16" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M9 9v10" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <svg x="328" y="279" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="4" y="5" width="16" height="14" rx="2" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M4 9h16" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M9 9v10" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         
 
-      <text x="344" y="282"
-            fill="#EDEDED"
+      <text x="354" y="292"
+            fill="#F0F0F0"
             font-family="Inter, Segoe UI, Arial, sans-serif"
             font-size="12" font-weight="700">UI</text>
     </g>
@@ -126,100 +126,100 @@
     </g>
     
     <g>
-      <rect x="490" y="122" width="414" height="190" rx="22"
+      <rect x="500" y="124" width="420" height="198" rx="22"
             fill="#0F0F0F" stroke="#2B2B2B" stroke-width="1.5"/>
 
-      <rect x="508" y="142" width="28" height="28" rx="9"
+      <rect x="524" y="148" width="28" height="28" rx="9"
             fill="#050505" stroke="#3A3A3A" stroke-width="1"/>
 
       
-        <svg x="514" y="148" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 3l7 3v5c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6l7-3z" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M9 12l2 2 4-5" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <svg x="530" y="154" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 3l7 3v5c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6l7-3z" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M9 12l2 2 4-5" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         
 
-      <text x="548" y="161" fill="#F5F5F5"
+      <text x="564" y="168" fill="#F5F5F5"
             font-family="Inter, Segoe UI, Arial, sans-serif"
             font-size="18" font-weight="900">AI Moderation Worker</text>
 
       
     <g>
-      <rect x="806" y="144" width="77" height="24" rx="12"
+      <rect x="820" y="152" width="77" height="24" rx="12"
             fill="#111111" stroke="#4A4A4A" stroke-width="1"/>
-      <text x="844.5" y="160" text-anchor="middle"
-            fill="#EDEDED"
+      <text x="858.5" y="168" text-anchor="middle"
+            fill="#F0F0F0"
             font-family="Inter, Segoe UI, Arial, sans-serif"
             font-size="10" font-weight="800">PRIVATE</text>
     </g>
     
       
     <g>
-      <rect x="514" y="180" width="76" height="24" rx="12"
+      <rect x="524" y="190" width="76" height="24" rx="12"
             fill="#111111" stroke="#4A4A4A" stroke-width="1"/>
-      <text x="552.0" y="196" text-anchor="middle"
-            fill="#EDEDED"
+      <text x="562.0" y="206" text-anchor="middle"
+            fill="#F0F0F0"
             font-family="Inter, Segoe UI, Arial, sans-serif"
             font-size="10" font-weight="800">ACTIVE</text>
     </g>
     
 
       
-    <text x="514" y="230" fill="#B8B8B8"
+    <text x="524" y="242" fill="#BDBDBD"
           font-family="Inter, Segoe UI, Arial, sans-serif"
           font-size="14" font-weight="400">
-    <tspan x="514" dy="0">Serverless moderation flow with filters</tspan><tspan x="514" dy="22">and API fallback.</tspan></text>
+    <tspan x="524" dy="0">Serverless moderation flow with filters and</tspan><tspan x="524" dy="22">API fallback.</tspan></text>
 
       
     <g>
-      <rect x="514" y="260" width="103" height="34" rx="17"
+      <rect x="524" y="270" width="107" height="34" rx="17"
             fill="#151515" stroke="#3A3A3A" stroke-width="1.2"/>
 
       
-        <svg x="527" y="269" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M7 18h10a4 4 0 0 0 0-8 6 6 0 0 0-11.5 1.8A3.5 3.5 0 0 0 7 18z" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <svg x="540" y="279" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 18h10a4 4 0 0 0 0-8 6 6 0 0 0-11.5 1.8A3.5 3.5 0 0 0 7 18z" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         
 
-      <text x="552" y="282"
-            fill="#EDEDED"
+      <text x="566" y="292"
+            fill="#F0F0F0"
             font-family="Inter, Segoe UI, Arial, sans-serif"
             font-size="12" font-weight="700">Workers</text>
     </g>
     
     <g>
-      <rect x="627" y="260" width="102" height="34" rx="17"
+      <rect x="641" y="270" width="100" height="34" rx="17"
             fill="#151515" stroke="#3A3A3A" stroke-width="1.2"/>
 
       
-        <svg x="640" y="269" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="5" cy="12" r="2" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="19" cy="6" r="2" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="19" cy="18" r="2" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M7 11l10-4" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M7 13l10 4" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <svg x="657" y="279" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="5" cy="12" r="2" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="19" cy="6" r="2" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="19" cy="18" r="2" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M7 11l10-4" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M7 13l10 4" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         
 
-      <text x="665" y="282"
-            fill="#EDEDED"
+      <text x="683" y="292"
+            fill="#F0F0F0"
             font-family="Inter, Segoe UI, Arial, sans-serif"
             font-size="12" font-weight="700">API</text>
     </g>
     
     <g>
-      <rect x="739" y="260" width="102" height="34" rx="17"
+      <rect x="751" y="270" width="100" height="34" rx="17"
             fill="#151515" stroke="#3A3A3A" stroke-width="1.2"/>
 
       
-        <svg x="752" y="269" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 3l2.2 5 4.8 2-4.8 2L12 17l-2.2-5L5 10l4.8-2L12 3z" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M18 15l.8 1.8L21 18l-2.2 1.2L18 21l-.8-1.8L15 18l2.2-1.2L18 15z" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <svg x="767" y="279" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 3l2.2 5 4.8 2-4.8 2L12 17l-2.2-5L5 10l4.8-2L12 3z" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M18 15l.8 1.8L21 18l-2.2 1.2L18 21l-.8-1.8L15 18l2.2-1.2L18 15z" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         
 
-      <text x="777" y="282"
-            fill="#EDEDED"
+      <text x="793" y="292"
+            fill="#F0F0F0"
             font-family="Inter, Segoe UI, Arial, sans-serif"
             font-size="12" font-weight="700">AI</text>
     </g>
@@ -227,100 +227,100 @@
     </g>
     
     <g>
-      <rect x="36" y="340" width="414" height="190" rx="22"
+      <rect x="40" y="350" width="420" height="198" rx="22"
             fill="#0F0F0F" stroke="#2B2B2B" stroke-width="1.5"/>
 
-      <rect x="54" y="360" width="28" height="28" rx="9"
+      <rect x="64" y="374" width="28" height="28" rx="9"
             fill="#050505" stroke="#3A3A3A" stroke-width="1"/>
 
       
-        <svg x="60" y="366" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M4 5h8" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M8 5v12" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M12 5c-.8 4.5-3 8-7 11" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M14 19l3-8 3 8" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M15.2 16h3.6" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <svg x="70" y="380" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 5h8" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M8 5v12" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 5c-.8 4.5-3 8-7 11" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M14 19l3-8 3 8" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M15.2 16h3.6" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         
 
-      <text x="94" y="379" fill="#F5F5F5"
+      <text x="104" y="394" fill="#F5F5F5"
             font-family="Inter, Segoe UI, Arial, sans-serif"
             font-size="18" font-weight="900">Window Translator</text>
 
       
     <g>
-      <rect x="352" y="362" width="77" height="24" rx="12"
+      <rect x="360" y="378" width="77" height="24" rx="12"
             fill="#111111" stroke="#4A4A4A" stroke-width="1"/>
-      <text x="390.5" y="378" text-anchor="middle"
-            fill="#EDEDED"
+      <text x="398.5" y="394" text-anchor="middle"
+            fill="#F0F0F0"
             font-family="Inter, Segoe UI, Arial, sans-serif"
             font-size="10" font-weight="800">PRIVATE</text>
     </g>
     
       
     <g>
-      <rect x="60" y="398" width="98" height="24" rx="12"
+      <rect x="64" y="416" width="98" height="24" rx="12"
             fill="#111111" stroke="#4A4A4A" stroke-width="1"/>
-      <text x="109.0" y="414" text-anchor="middle"
-            fill="#EDEDED"
+      <text x="113.0" y="432" text-anchor="middle"
+            fill="#F0F0F0"
             font-family="Inter, Segoe UI, Arial, sans-serif"
             font-size="10" font-weight="800">EXPERIMENT</text>
     </g>
     
 
       
-    <text x="60" y="448" fill="#B8B8B8"
+    <text x="64" y="468" fill="#BDBDBD"
           font-family="Inter, Segoe UI, Arial, sans-serif"
           font-size="14" font-weight="400">
-    <tspan x="60" dy="0">Translation utility focused on smooth user</tspan><tspan x="60" dy="22">experience.</tspan></text>
+    <tspan x="64" dy="0">Translation utility focused on smooth user</tspan><tspan x="64" dy="22">experience.</tspan></text>
 
       
     <g>
-      <rect x="60" y="478" width="124" height="34" rx="17"
+      <rect x="64" y="496" width="128" height="34" rx="17"
             fill="#151515" stroke="#3A3A3A" stroke-width="1.2"/>
 
       
-        <svg x="73" y="487" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="4" y="4" width="16" height="16" rx="2" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M8 9v5.5c0 1.2-.7 2-2 2.2" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M13 16c.5.6 1.2.9 2.1.9 1.1 0 1.9-.5 1.9-1.4 0-.8-.5-1.2-1.7-1.6l-.8-.2c-1.2-.4-1.8-1.1-1.8-2.2 0-1.3 1.1-2.2 2.5-2.2.9 0 1.7.3 2.3 1" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <svg x="80" y="505" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="4" y="4" width="16" height="16" rx="2" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M9 9v6c0 1.2-.7 2-2 2" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M14 17c1.8.3 3-.4 3-1.7 0-1-.6-1.4-2-1.8-1.3-.4-2-1-2-2.2 0-1.4 1.1-2.3 2.7-2.3.9 0 1.7.3 2.3.9" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         
 
-      <text x="98" y="500"
-            fill="#EDEDED"
+      <text x="106" y="518"
+            fill="#F0F0F0"
             font-family="Inter, Segoe UI, Arial, sans-serif"
             font-size="12" font-weight="700">JavaScript</text>
     </g>
     
     <g>
-      <rect x="194" y="478" width="102" height="34" rx="17"
+      <rect x="202" y="496" width="100" height="34" rx="17"
             fill="#151515" stroke="#3A3A3A" stroke-width="1.2"/>
 
       
-        <svg x="207" y="487" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M14.7 6.3a4 4 0 0 0-5 5L4 17a2 2 0 0 0 3 3l5.7-5.7a4 4 0 0 0 5-5l-2.8 2.8-3-3 2.8-2.8z" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <svg x="218" y="505" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14.7 6.3a4 4 0 0 0-5 5L4 17a2 2 0 0 0 3 3l5.7-5.7a4 4 0 0 0 5-5l-2.8 2.8-3-3 2.8-2.8z" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         
 
-      <text x="232" y="500"
-            fill="#EDEDED"
+      <text x="244" y="518"
+            fill="#F0F0F0"
             font-family="Inter, Segoe UI, Arial, sans-serif"
             font-size="12" font-weight="700">Tools</text>
     </g>
     
     <g>
-      <rect x="306" y="478" width="102" height="34" rx="17"
+      <rect x="312" y="496" width="100" height="34" rx="17"
             fill="#151515" stroke="#3A3A3A" stroke-width="1.2"/>
 
       
-        <svg x="319" y="487" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M5 3l12 11-5 .8 2.8 5.2-2.8 1.4-2.7-5.2L5 20V3z" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <svg x="328" y="505" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 3l12 11-5 .8 2.8 5.2-2.8 1.4-2.7-5.2L5 20V3z" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         
 
-      <text x="344" y="500"
-            fill="#EDEDED"
+      <text x="354" y="518"
+            fill="#F0F0F0"
             font-family="Inter, Segoe UI, Arial, sans-serif"
             font-size="12" font-weight="700">UX</text>
     </g>
@@ -328,109 +328,109 @@
     </g>
     
     <g>
-      <rect x="490" y="340" width="414" height="190" rx="22"
+      <rect x="500" y="350" width="420" height="198" rx="22"
             fill="#0F0F0F" stroke="#2B2B2B" stroke-width="1.5"/>
 
-      <rect x="508" y="360" width="28" height="28" rx="9"
+      <rect x="524" y="374" width="28" height="28" rx="9"
             fill="#050505" stroke="#3A3A3A" stroke-width="1"/>
 
       
-        <svg x="514" y="366" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="4" y="4" width="16" height="6" rx="2" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <rect x="4" y="14" width="16" height="6" rx="2" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M8 7h.01" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M8 17h.01" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <svg x="530" y="380" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="4" y="4" width="16" height="6" rx="2" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="4" y="14" width="16" height="6" rx="2" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M8 7h.01" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M8 17h.01" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         
 
-      <text x="548" y="379" fill="#F5F5F5"
+      <text x="564" y="394" fill="#F5F5F5"
             font-family="Inter, Segoe UI, Arial, sans-serif"
             font-size="18" font-weight="900">Serverless Tools</text>
 
       
     <g>
-      <rect x="806" y="362" width="77" height="24" rx="12"
+      <rect x="820" y="378" width="77" height="24" rx="12"
             fill="#111111" stroke="#4A4A4A" stroke-width="1"/>
-      <text x="844.5" y="378" text-anchor="middle"
-            fill="#EDEDED"
+      <text x="858.5" y="394" text-anchor="middle"
+            fill="#F0F0F0"
             font-family="Inter, Segoe UI, Arial, sans-serif"
             font-size="10" font-weight="800">PRIVATE</text>
     </g>
     
       
     <g>
-      <rect x="514" y="398" width="84" height="24" rx="12"
+      <rect x="524" y="416" width="84" height="24" rx="12"
             fill="#111111" stroke="#4A4A4A" stroke-width="1"/>
-      <text x="556.0" y="414" text-anchor="middle"
-            fill="#EDEDED"
+      <text x="566.0" y="432" text-anchor="middle"
+            fill="#F0F0F0"
             font-family="Inter, Segoe UI, Arial, sans-serif"
             font-size="10" font-weight="800">BUILDING</text>
     </g>
     
 
       
-    <text x="514" y="448" fill="#B8B8B8"
+    <text x="524" y="468" fill="#BDBDBD"
           font-family="Inter, Segoe UI, Arial, sans-serif"
           font-size="14" font-weight="400">
-    <tspan x="514" dy="0">Small useful systems, automations and API</tspan><tspan x="514" dy="22">experiments.</tspan></text>
+    <tspan x="524" dy="0">Small useful systems, automations and API</tspan><tspan x="524" dy="22">experiments.</tspan></text>
 
       
     <g>
-      <rect x="514" y="478" width="103" height="34" rx="17"
+      <rect x="524" y="496" width="107" height="34" rx="17"
             fill="#151515" stroke="#3A3A3A" stroke-width="1.2"/>
 
       
-        <svg x="527" y="487" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M7 18h10a4 4 0 0 0 0-8 6 6 0 0 0-11.5 1.8A3.5 3.5 0 0 0 7 18z" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <svg x="540" y="505" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 18h10a4 4 0 0 0 0-8 6 6 0 0 0-11.5 1.8A3.5 3.5 0 0 0 7 18z" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         
 
-      <text x="552" y="500"
-            fill="#EDEDED"
+      <text x="566" y="518"
+            fill="#F0F0F0"
             font-family="Inter, Segoe UI, Arial, sans-serif"
             font-size="12" font-weight="700">Workers</text>
     </g>
     
     <g>
-      <rect x="627" y="478" width="124" height="34" rx="17"
+      <rect x="641" y="496" width="128" height="34" rx="17"
             fill="#151515" stroke="#3A3A3A" stroke-width="1.2"/>
 
       
-        <svg x="640" y="487" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="12" cy="12" r="3" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M12 2v3" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M12 19v3" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M2 12h3" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M19 12h3" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M4.9 4.9l2.1 2.1" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M17 17l2.1 2.1" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M19.1 4.9L17 7" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M7 17l-2.1 2.1" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <svg x="657" y="505" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="3" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 2v3" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 19v3" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2 12h3" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M19 12h3" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M4.9 4.9l2.1 2.1" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M17 17l2.1 2.1" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M19.1 4.9L17 7" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M7 17l-2.1 2.1" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         
 
-      <text x="665" y="500"
-            fill="#EDEDED"
+      <text x="683" y="518"
+            fill="#F0F0F0"
             font-family="Inter, Segoe UI, Arial, sans-serif"
             font-size="12" font-weight="700">Automation</text>
     </g>
     
     <g>
-      <rect x="761" y="478" width="102" height="34" rx="17"
+      <rect x="779" y="496" width="100" height="34" rx="17"
             fill="#151515" stroke="#3A3A3A" stroke-width="1.2"/>
 
       
-        <svg x="774" y="487" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="5" cy="12" r="2" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="19" cy="6" r="2" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="19" cy="18" r="2" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M7 11l10-4" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M7 13l10 4" stroke="#EDEDED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <svg x="795" y="505" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="5" cy="12" r="2" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="19" cy="6" r="2" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="19" cy="18" r="2" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M7 11l10-4" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M7 13l10 4" stroke="#F2F2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         
 
-      <text x="799" y="500"
-            fill="#EDEDED"
+      <text x="821" y="518"
+            fill="#F0F0F0"
             font-family="Inter, Segoe UI, Arial, sans-serif"
             font-size="12" font-weight="700">APIs</text>
     </g>
@@ -438,9 +438,9 @@
     </g>
     
 
-  <text x="36" y="566" fill="#747474"
+  <text x="40" y="586" fill="#747474"
         font-family="Inter, Segoe UI, Arial, sans-serif"
         font-size="12">
-    last update: 28.05.2026 • 02:07
+    last update: 28.05.2026 • 02:12
   </text>
 </svg>
