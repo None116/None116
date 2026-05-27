@@ -1,0 +1,31 @@
+<svg width="980" height="220" viewBox="0 0 980 220" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+  <style>
+    .pixel {
+      font-family: "Press Start 2P", "Courier New", monospace;
+      letter-spacing: 0.2px;
+    }
+    .pixel-small {
+      font-family: "Press Start 2P", "Courier New", monospace;
+      letter-spacing: 0px;
+    }
+  </style>
+
+  <rect width="980" height="220" fill="#101510"/>
+  <rect x="0" y="0" width="980" height="28" fill="#6aa84f"/>
+  <rect x="0" y="28" width="980" height="20" fill="#5b3a1e"/>
+  <rect x="10" y="58" width="960" height="152" fill="#1b1b1b" stroke="#3f4d42" stroke-width="4"/>
+  <rect x="18" y="66" width="944" height="136" fill="#11161a" stroke="#202a22" stroke-width="2"/>
+
+  <rect x="42" y="92" width="24" height="24" fill="#7bd389" stroke="#24492c" stroke-width="2"/>
+  <rect x="70" y="92" width="24" height="24" fill="#82c7ff" stroke="#274c63" stroke-width="2"/>
+  <rect x="98" y="92" width="24" height="24" fill="#ffd966" stroke="#6f5d16" stroke-width="2"/>
+
+  <text x="42" y="148" class="pixel" fill="#f3f7ef" font-size="28">SEMOOF</text>
+  <text x="42" y="176" class="pixel-small" fill="#b7c8b0" font-size="12">web developer • serverless tools • ai experiments</text>
+
+  <rect x="650" y="90" width="260" height="88" fill="#151d16" stroke="#456247" stroke-width="3"/>
+  <text x="670" y="116" class="pixel-small" fill="#8fd17b" font-size="11">PLAYER</text>
+  <text x="670" y="136" class="pixel-small" fill="#eef7e8" font-size="11">Semoof / None116</text>
+  <text x="670" y="158" class="pixel-small" fill="#8fd17b" font-size="11">MODE</text>
+  <text x="670" y="178" class="pixel-small" fill="#eef7e8" font-size="11">private repos, public grind</text>
+</svg>

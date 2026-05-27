@@ -1,362 +1,274 @@
-<svg width="920" height="590" viewBox="0 0 920 590" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="920" height="590" rx="28" fill="#0A1018"/>
-  <rect x="1" y="1" width="918" height="588" rx="27"
-        stroke="#1D2A3A" stroke-width="1.5"/>
+<svg width="920" height="590" viewBox="0 0 920 590" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+  <style>
+    .pixel {
+      font-family: "Press Start 2P", "Courier New", monospace;
+      letter-spacing: 0.2px;
+    }
+    .pixel-small {
+      font-family: "Press Start 2P", "Courier New", monospace;
+      letter-spacing: 0px;
+    }
+  </style>
 
-  <rect x="36" y="32" width="8" height="52" rx="4" fill="#5FA8FF"/>
+  <rect width="920" height="590" fill="#101510"/>
+  <rect x="0" y="0" width="920" height="26" fill="#6aa84f"/>
+  <rect x="0" y="26" width="920" height="16" fill="#5b3a1e"/>
 
-  <text x="62" y="52" fill="#F2F6FA"
-        font-family="Inter, Segoe UI, Arial, sans-serif"
-        font-size="28" font-weight="800">
-    Project Showcase
-  </text>
+  <rect x="12" y="54" width="896" height="524" fill="#1b1b1b" stroke="#3f4d42" stroke-width="4"/>
+  <rect x="20" y="62" width="880" height="508" fill="#0f1417" stroke="#212b21" stroke-width="2"/>
 
-  <text x="62" y="76" fill="#8FA3B8"
-        font-family="Inter, Segoe UI, Arial, sans-serif"
-        font-size="14" font-weight="500">
-    selected builds, tools and experiments
-  </text>
+  <rect x="36" y="86" width="10" height="34" fill="#7bd389"/>
+  <text x="62" y="108" class="pixel" fill="#f3f7ef" font-size="18">PROJECT SHOWCASE</text>
+  <text x="62" y="130" class="pixel-small" fill="#b7c8b0" font-size="10">selected builds, tools and experiments</text>
 
-  <line x1="36" y1="100" x2="884" y2="100"
-        stroke="#1E3148" stroke-width="2"/>
+  <rect x="36" y="148" width="848" height="4" fill="#334238"/>
 
   
     <g>
-      <rect x="36" y="126" width="404" height="178" rx="22"
-            fill="#0D1522" stroke="#243447" stroke-width="1.2"/>
+      <rect x="36" y="126" width="404" height="182" fill="#1b1b1b" stroke="#3b4a3f" stroke-width="3"/>
+      <rect x="40" y="130" width="396" height="174" fill="#11161a" stroke="#1f2b22" stroke-width="1"/>
 
-      <circle cx="62" cy="156" r="5" fill="#5FA8FF"/>
-
-      <text x="80" y="162" fill="#EAF1F8"
-            font-family="Inter, Segoe UI, Arial, sans-serif"
-            font-size="18" font-weight="800">MRPSite</text>
-
+      <rect x="52" y="140" width="20" height="20" fill="#1a232b" stroke="#3b5562" stroke-width="2"/>
       
-    <text x="60" y="214" fill="#B8C2CF"
-          font-family="Inter, Segoe UI, Arial, sans-serif"
-          font-size="14" font-weight="400">
-    <tspan x="60" dy="0">Clean web interface with polished</tspan><tspan x="60" dy="22">layouts and UI logic.</tspan></text>
-
-      
-    <g>
-      <rect x="60" y="252" width="102" height="32" rx="16"
-            fill="#102338" stroke="#24405E" stroke-width="1"/>
-
-      <rect x="68" y="259" width="18" height="18" rx="9"
-            fill="#17314A" stroke="#34597A" stroke-width="1"/>
-
-      
-        <g transform="translate(69,260)" fill="none" stroke="#7DD3FC" stroke-width="1.2" stroke-linecap="round">
-          <ellipse cx="8" cy="8" rx="6.2" ry="2.8"/>
-          <ellipse cx="8" cy="8" rx="6.2" ry="2.8" transform="rotate(60 8 8)"/>
-          <ellipse cx="8" cy="8" rx="6.2" ry="2.8" transform="rotate(120 8 8)"/>
-          <circle cx="8" cy="8" r="1.5" fill="#7DD3FC" stroke="none"/>
+        <g transform="translate(54,142)" fill="none" stroke="#82c7ff" stroke-width="1.5" stroke-linecap="square">
+          <rect x="2" y="2" width="12" height="10"/>
+          <line x1="6" y1="13.5" x2="10" y2="13.5"/>
+          <line x1="8" y1="12" x2="8" y2="13.5"/>
         </g>
         
 
-      <text x="94" y="273"
-            fill="#CFE7FF"
-            font-family="Inter, Segoe UI, Arial, sans-serif"
-            font-size="12" font-weight="600">React</text>
+      <text x="82" y="156" class="pixel" fill="#f3f7ef" font-size="16">MRPSite</text>
+
+      <text x="56" y="190" class="pixel-small" fill="#d1dbc8" font-size="11"><tspan x="56" dy="0">Clean web interface with polished</tspan><tspan x="56" dy="16">layouts and UI logic.</tspan></text>
+
+      
+    <g>
+      <rect x="56" y="266" width="94" height="30" fill="#123048" stroke="#2d5f7a" stroke-width="2"/>
+      <rect x="64" y="273" width="16" height="16" fill="#11181f" stroke="#2d5f7a" stroke-width="1"/>
+      
+        <g transform="translate(64,273)" fill="none" stroke="#7ed7ff" stroke-width="1.2" stroke-linecap="square">
+          <ellipse cx="8" cy="8" rx="6" ry="2.8"/>
+          <ellipse cx="8" cy="8" rx="6" ry="2.8" transform="rotate(60 8 8)"/>
+          <ellipse cx="8" cy="8" rx="6" ry="2.8" transform="rotate(120 8 8)"/>
+          <rect x="6.6" y="6.6" width="2.8" height="2.8" fill="#7ed7ff" stroke="none"/>
+        </g>
+        
+      <text x="88" y="285" class="pixel-small" fill="#bfefff" font-size="10">React</text>
     </g>
     
     <g>
-      <rect x="172" y="252" width="132" height="32" rx="16"
-            fill="#211B0D" stroke="#4B4021" stroke-width="1"/>
-
-      <rect x="180" y="259" width="18" height="18" rx="9"
-            fill="#3A3010" stroke="#67561A" stroke-width="1"/>
-
+      <rect x="158" y="266" width="124" height="30" fill="#3A300C" stroke="#796419" stroke-width="2"/>
+      <rect x="166" y="273" width="16" height="16" fill="#11181f" stroke="#796419" stroke-width="1"/>
       
-        <g transform="translate(181,260)">
-          <rect x="1.5" y="1.5" width="13" height="13" rx="3" fill="#FDE68A" opacity="0.18" stroke="#FDE68A" stroke-width="1"/>
-          <path d="M6 5.2v4.6c0 1.6-.7 2.5-2.2 2.8" fill="none" stroke="#FDE68A" stroke-width="1.4" stroke-linecap="round"/>
-          <path d="M9 10.7c.4.8 1.1 1.2 2.1 1.2 1 0 1.9-.4 1.9-1.3 0-.8-.5-1.1-1.6-1.5l-.8-.3c-1.3-.5-1.9-1.2-1.9-2.3 0-1.4 1.2-2.3 2.7-2.3 1.1 0 1.9.4 2.5 1.2" fill="none" stroke="#FDE68A" stroke-width="1.2" stroke-linecap="round"/>
+        <g transform="translate(166,273)" fill="none" stroke="#f7dc6f" stroke-width="1.2" stroke-linecap="square" stroke-linejoin="miter">
+          <rect x="2" y="2" width="12" height="12"/>
+          <path d="M6 5v4.2c0 1.3-.7 2-1.9 2.3"/>
+          <path d="M9 10.2c.5.8 1.2 1.1 2.1 1.1 1 0 1.7-.4 1.7-1.2 0-.7-.4-1-1.5-1.3l-.7-.2c-1.2-.4-1.8-1-1.8-2.1 0-1.2 1-2 2.3-2 .9 0 1.6.3 2.1 1"/>
+        </g>
+        
+      <text x="190" y="285" class="pixel-small" fill="#f6e7a4" font-size="10">JavaScript</text>
+    </g>
+    
+    <g>
+      <rect x="290" y="266" width="94" height="30" fill="#1f2f3f" stroke="#4b6478" stroke-width="2"/>
+      <rect x="298" y="273" width="16" height="16" fill="#11181f" stroke="#4b6478" stroke-width="1"/>
+      
+        <g transform="translate(298,273)" fill="none" stroke="#9cc8ff" stroke-width="1.2" stroke-linecap="square">
+          <rect x="2" y="2.5" width="12" height="11"/>
+          <line x1="2" y1="6.2" x2="14" y2="6.2"/>
+          <line x1="6.5" y1="6.2" x2="6.5" y2="13.5"/>
+        </g>
+        
+      <text x="322" y="285" class="pixel-small" fill="#d8ecff" font-size="10">UI</text>
+    </g>
+    
+    </g>
+    
+    <g>
+      <rect x="480" y="126" width="404" height="182" fill="#1b1b1b" stroke="#3b4a3f" stroke-width="3"/>
+      <rect x="484" y="130" width="396" height="174" fill="#11161a" stroke="#1f2b22" stroke-width="1"/>
+
+      <rect x="496" y="140" width="20" height="20" fill="#1a232b" stroke="#3b5562" stroke-width="2"/>
+      
+        <g transform="translate(498,142)" fill="none" stroke="#82c7ff" stroke-width="1.5" stroke-linecap="square">
+          <path d="M8 2.5 13 4.5v4c0 3-2.1 4.7-5 6-2.9-1.3-5-3-5-6v-4Z"/>
+          <line x1="5.5" y1="8" x2="7.2" y2="9.7"/>
+          <line x1="7.2" y1="9.7" x2="10.8" y2="6.1"/>
         </g>
         
 
-      <text x="206" y="273"
-            fill="#F7E7A5"
-            font-family="Inter, Segoe UI, Arial, sans-serif"
-            font-size="12" font-weight="600">JavaScript</text>
+      <text x="526" y="156" class="pixel" fill="#f3f7ef" font-size="16">AI Moderation Worker</text>
+
+      <text x="500" y="190" class="pixel-small" fill="#d1dbc8" font-size="11"><tspan x="500" dy="0">Serverless moderation flow with</tspan><tspan x="500" dy="16">filters and API fallback.</tspan></text>
+
+      
+    <g>
+      <rect x="500" y="266" width="103" height="30" fill="#4A2B12" stroke="#8E5B2D" stroke-width="2"/>
+      <rect x="508" y="273" width="16" height="16" fill="#11181f" stroke="#8E5B2D" stroke-width="1"/>
+      
+        <g transform="translate(508,273)" fill="none" stroke="#ffb36a" stroke-width="1.2" stroke-linecap="square">
+          <path d="M3.2 11.5h9.3a2.8 2.8 0 0 0 0-5.6 4 4 0 0 0-7.7 1.1A2.6 2.6 0 0 0 3.2 11.5Z"/>
+          <line x1="4.8" y1="13.2" x2="11.5" y2="13.2"/>
+        </g>
+        
+      <text x="532" y="285" class="pixel-small" fill="#ffd8b0" font-size="10">Workers</text>
     </g>
     
     <g>
-      <rect x="314" y="252" width="102" height="32" rx="16"
-            fill="#15202E" stroke="#31465D" stroke-width="1"/>
-
-      <rect x="322" y="259" width="18" height="18" rx="9"
-            fill="#22354A" stroke="#46627F" stroke-width="1"/>
-
+      <rect x="611" y="266" width="94" height="30" fill="#173447" stroke="#386887" stroke-width="2"/>
+      <rect x="619" y="273" width="16" height="16" fill="#11181f" stroke="#386887" stroke-width="1"/>
       
-        <g transform="translate(323,260)" fill="none" stroke="#93C5FD" stroke-width="1.2">
-          <rect x="1.8" y="2.2" width="12.4" height="11.6" rx="2.2"/>
-          <line x1="1.8" y1="6.2" x2="14.2" y2="6.2"/>
-          <line x1="6.2" y1="6.2" x2="6.2" y2="13.8"/>
+        <g transform="translate(619,273)" fill="none" stroke="#91cbff" stroke-width="1.2" stroke-linecap="square">
+          <rect x="2" y="6.8" width="2.4" height="2.4"/>
+          <rect x="11.6" y="2" width="2.4" height="2.4"/>
+          <rect x="11.6" y="11.6" width="2.4" height="2.4"/>
+          <line x1="4.4" y1="8" x2="11.6" y2="3.8"/>
+          <line x1="4.4" y1="8" x2="11.6" y2="12.8"/>
+        </g>
+        
+      <text x="643" y="285" class="pixel-small" fill="#d7efff" font-size="10">API</text>
+    </g>
+    
+    <g>
+      <rect x="713" y="266" width="94" height="30" fill="#3B1F42" stroke="#704087" stroke-width="2"/>
+      <rect x="721" y="273" width="16" height="16" fill="#11181f" stroke="#704087" stroke-width="1"/>
+      
+        <g transform="translate(721,273)" fill="none" stroke="#d8a7ff" stroke-width="1.2" stroke-linecap="square">
+          <path d="M8 2.8 9.6 6.2 13 7.8 9.6 9.4 8 12.8 6.4 9.4 3 7.8 6.4 6.2Z"/>
+          <path d="M12.2 11.2 12.8 12.6 14.2 13.2 12.8 13.8 12.2 15.2 11.6 13.8 10.2 13.2 11.6 12.6Z"/>
+        </g>
+        
+      <text x="745" y="285" class="pixel-small" fill="#efd9ff" font-size="10">AI</text>
+    </g>
+    
+    </g>
+    
+    <g>
+      <rect x="36" y="334" width="404" height="182" fill="#1b1b1b" stroke="#3b4a3f" stroke-width="3"/>
+      <rect x="40" y="338" width="396" height="174" fill="#11161a" stroke="#1f2b22" stroke-width="1"/>
+
+      <rect x="52" y="348" width="20" height="20" fill="#1a232b" stroke="#3b5562" stroke-width="2"/>
+      
+        <g transform="translate(54,350)" fill="none" stroke="#82c7ff" stroke-width="1.4" stroke-linecap="square">
+          <line x1="3" y1="4" x2="9" y2="4"/>
+          <line x1="4.5" y1="4" x2="4.5" y2="12"/>
+          <line x1="9" y1="4" x2="6" y2="12"/>
+          <line x1="10.5" y1="4.5" x2="13.5" y2="4.5"/>
+          <line x1="12" y1="3" x2="12" y2="11"/>
+          <line x1="10.5" y1="11.5" x2="13.5" y2="11.5"/>
         </g>
         
 
-      <text x="348" y="273"
-            fill="#D7E7F7"
-            font-family="Inter, Segoe UI, Arial, sans-serif"
-            font-size="12" font-weight="600">UI</text>
+      <text x="82" y="364" class="pixel" fill="#f3f7ef" font-size="16">Window Translator</text>
+
+      <text x="56" y="398" class="pixel-small" fill="#d1dbc8" font-size="11"><tspan x="56" dy="0">Translation utility focused on</tspan><tspan x="56" dy="16">smooth user experience.</tspan></text>
+
+      
+    <g>
+      <rect x="56" y="474" width="124" height="30" fill="#3A300C" stroke="#796419" stroke-width="2"/>
+      <rect x="64" y="481" width="16" height="16" fill="#11181f" stroke="#796419" stroke-width="1"/>
+      
+        <g transform="translate(64,481)" fill="none" stroke="#f7dc6f" stroke-width="1.2" stroke-linecap="square" stroke-linejoin="miter">
+          <rect x="2" y="2" width="12" height="12"/>
+          <path d="M6 5v4.2c0 1.3-.7 2-1.9 2.3"/>
+          <path d="M9 10.2c.5.8 1.2 1.1 2.1 1.1 1 0 1.7-.4 1.7-1.2 0-.7-.4-1-1.5-1.3l-.7-.2c-1.2-.4-1.8-1-1.8-2.1 0-1.2 1-2 2.3-2 .9 0 1.6.3 2.1 1"/>
+        </g>
+        
+      <text x="88" y="493" class="pixel-small" fill="#f6e7a4" font-size="10">JavaScript</text>
+    </g>
+    
+    <g>
+      <rect x="188" y="474" width="94" height="30" fill="#1f3324" stroke="#4c7757" stroke-width="2"/>
+      <rect x="196" y="481" width="16" height="16" fill="#11181f" stroke="#4c7757" stroke-width="1"/>
+      
+        <g transform="translate(196,481)" fill="none" stroke="#98e4a9" stroke-width="1.2" stroke-linecap="square">
+          <path d="M10.8 3a3 3 0 0 0-3.5 3.8L3.4 10.7a1.1 1.1 0 1 0 1.6 1.6l3.9-3.9a3 3 0 0 0 3.8-3.5l-2 2-2-2Z"/>
+        </g>
+        
+      <text x="220" y="493" class="pixel-small" fill="#d9f4df" font-size="10">Tools</text>
+    </g>
+    
+    <g>
+      <rect x="290" y="474" width="94" height="30" fill="#3c2632" stroke="#7f5369" stroke-width="2"/>
+      <rect x="298" y="481" width="16" height="16" fill="#11181f" stroke="#7f5369" stroke-width="1"/>
+      
+        <g transform="translate(298,481)" fill="none" stroke="#f4b7d3" stroke-width="1.2" stroke-linecap="square">
+          <path d="M3 3l8 7-3.4.8 1.8 3.2-1.6.8-1.8-3.3L3 13.4Z"/>
+        </g>
+        
+      <text x="322" y="493" class="pixel-small" fill="#f2dde8" font-size="10">UX</text>
     </g>
     
     </g>
     
     <g>
-      <rect x="480" y="126" width="404" height="178" rx="22"
-            fill="#0D1522" stroke="#243447" stroke-width="1.2"/>
+      <rect x="480" y="334" width="404" height="182" fill="#1b1b1b" stroke="#3b4a3f" stroke-width="3"/>
+      <rect x="484" y="338" width="396" height="174" fill="#11161a" stroke="#1f2b22" stroke-width="1"/>
 
-      <circle cx="506" cy="156" r="5" fill="#5FA8FF"/>
-
-      <text x="524" y="162" fill="#EAF1F8"
-            font-family="Inter, Segoe UI, Arial, sans-serif"
-            font-size="18" font-weight="800">AI Moderation Worker</text>
-
+      <rect x="496" y="348" width="20" height="20" fill="#1a232b" stroke="#3b5562" stroke-width="2"/>
       
-    <text x="504" y="214" fill="#B8C2CF"
-          font-family="Inter, Segoe UI, Arial, sans-serif"
-          font-size="14" font-weight="400">
-    <tspan x="504" dy="0">Serverless moderation flow with</tspan><tspan x="504" dy="22">filters and API fallback.</tspan></text>
-
-      
-    <g>
-      <rect x="504" y="252" width="108" height="32" rx="16"
-            fill="#251A12" stroke="#4B3627" stroke-width="1"/>
-
-      <rect x="512" y="259" width="18" height="18" rx="9"
-            fill="#3B271B" stroke="#6A4630" stroke-width="1"/>
-
-      
-        <g transform="translate(513,260)" fill="none" stroke="#FDBA74" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M3 11.5h9.2a2.8 2.8 0 0 0 0-5.6 4.2 4.2 0 0 0-7.9 1.1A2.6 2.6 0 0 0 3 11.5Z"/>
-          <path d="M5.2 13.2h6.2"/>
+        <g transform="translate(498,350)" fill="none" stroke="#82c7ff" stroke-width="1.4" stroke-linecap="square">
+          <rect x="2.5" y="8" width="11" height="4"/>
+          <line x1="5" y1="4" x2="5" y2="8"/>
+          <line x1="11" y1="4" x2="11" y2="8"/>
+          <line x1="3.5" y1="12" x2="3.5" y2="14"/>
+          <line x1="12.5" y1="12" x2="12.5" y2="14"/>
         </g>
         
 
-      <text x="538" y="273"
-            fill="#F1D6C2"
-            font-family="Inter, Segoe UI, Arial, sans-serif"
-            font-size="12" font-weight="600">Workers</text>
-    </g>
-    
-    <g>
-      <rect x="622" y="252" width="102" height="32" rx="16"
-            fill="#142331" stroke="#2F4C64" stroke-width="1"/>
+      <text x="526" y="364" class="pixel" fill="#f3f7ef" font-size="16">Serverless Tools</text>
 
-      <rect x="630" y="259" width="18" height="18" rx="9"
-            fill="#1D3348" stroke="#40617A" stroke-width="1"/>
+      <text x="500" y="398" class="pixel-small" fill="#d1dbc8" font-size="11"><tspan x="500" dy="0">Small useful systems, automations</tspan><tspan x="500" dy="16">and API experiments.</tspan></text>
 
       
-        <g transform="translate(631,260)" fill="none" stroke="#93C5FD" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="3.2" cy="8" r="1.5"/>
-          <circle cx="12.8" cy="3.2" r="1.5"/>
-          <circle cx="12.8" cy="12.8" r="1.5"/>
-          <path d="M4.7 7.3 11.3 3.9"/>
-          <path d="M4.7 8.7 11.3 12.1"/>
+    <g>
+      <rect x="500" y="474" width="103" height="30" fill="#4A2B12" stroke="#8E5B2D" stroke-width="2"/>
+      <rect x="508" y="481" width="16" height="16" fill="#11181f" stroke="#8E5B2D" stroke-width="1"/>
+      
+        <g transform="translate(508,481)" fill="none" stroke="#ffb36a" stroke-width="1.2" stroke-linecap="square">
+          <path d="M3.2 11.5h9.3a2.8 2.8 0 0 0 0-5.6 4 4 0 0 0-7.7 1.1A2.6 2.6 0 0 0 3.2 11.5Z"/>
+          <line x1="4.8" y1="13.2" x2="11.5" y2="13.2"/>
         </g>
         
-
-      <text x="656" y="273"
-            fill="#D3E6F7"
-            font-family="Inter, Segoe UI, Arial, sans-serif"
-            font-size="12" font-weight="600">API</text>
+      <text x="532" y="493" class="pixel-small" fill="#ffd8b0" font-size="10">Workers</text>
     </g>
     
     <g>
-      <rect x="734" y="252" width="102" height="32" rx="16"
-            fill="#23182A" stroke="#4A3055" stroke-width="1"/>
-
-      <rect x="742" y="259" width="18" height="18" rx="9"
-            fill="#33213D" stroke="#6A4379" stroke-width="1"/>
-
+      <rect x="611" y="474" width="124" height="30" fill="#22351E" stroke="#547851" stroke-width="2"/>
+      <rect x="619" y="481" width="16" height="16" fill="#11181f" stroke="#547851" stroke-width="1"/>
       
-        <g transform="translate(743,260)" fill="none" stroke="#D8B4FE" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M8 2.3 9.5 5.8 13 7.3 9.5 8.8 8 12.3 6.5 8.8 3 7.3 6.5 5.8Z"/>
-          <path d="M12.2 10.8 12.8 12.2 14.2 12.8 12.8 13.4 12.2 14.8 11.6 13.4 10.2 12.8 11.6 12.2Z"/>
+        <g transform="translate(619,481)" fill="none" stroke="#9ee19a" stroke-width="1.2" stroke-linecap="square">
+          <rect x="6.2" y="6.2" width="3.6" height="3.6"/>
+          <line x1="8" y1="2.2" x2="8" y2="4.4"/>
+          <line x1="8" y1="11.6" x2="8" y2="13.8"/>
+          <line x1="2.2" y1="8" x2="4.4" y2="8"/>
+          <line x1="11.6" y1="8" x2="13.8" y2="8"/>
+          <line x1="4.1" y1="4.1" x2="5.5" y2="5.5"/>
+          <line x1="10.5" y1="10.5" x2="11.9" y2="11.9"/>
+          <line x1="11.9" y1="4.1" x2="10.5" y2="5.5"/>
+          <line x1="5.5" y1="10.5" x2="4.1" y2="11.9"/>
         </g>
         
-
-      <text x="768" y="273"
-            fill="#EADAF7"
-            font-family="Inter, Segoe UI, Arial, sans-serif"
-            font-size="12" font-weight="600">AI</text>
-    </g>
-    
+      <text x="643" y="493" class="pixel-small" fill="#dff4da" font-size="10">Automation</text>
     </g>
     
     <g>
-      <rect x="36" y="330" width="404" height="178" rx="22"
-            fill="#0D1522" stroke="#243447" stroke-width="1.2"/>
-
-      <circle cx="62" cy="360" r="5" fill="#5FA8FF"/>
-
-      <text x="80" y="366" fill="#EAF1F8"
-            font-family="Inter, Segoe UI, Arial, sans-serif"
-            font-size="18" font-weight="800">Window Translator</text>
-
+      <rect x="743" y="474" width="94" height="30" fill="#173447" stroke="#386887" stroke-width="2"/>
+      <rect x="751" y="481" width="16" height="16" fill="#11181f" stroke="#386887" stroke-width="1"/>
       
-    <text x="60" y="418" fill="#B8C2CF"
-          font-family="Inter, Segoe UI, Arial, sans-serif"
-          font-size="14" font-weight="400">
-    <tspan x="60" dy="0">Translation utility focused on smooth</tspan><tspan x="60" dy="22">user experience.</tspan></text>
-
-      
-    <g>
-      <rect x="60" y="456" width="132" height="32" rx="16"
-            fill="#211B0D" stroke="#4B4021" stroke-width="1"/>
-
-      <rect x="68" y="463" width="18" height="18" rx="9"
-            fill="#3A3010" stroke="#67561A" stroke-width="1"/>
-
-      
-        <g transform="translate(69,464)">
-          <rect x="1.5" y="1.5" width="13" height="13" rx="3" fill="#FDE68A" opacity="0.18" stroke="#FDE68A" stroke-width="1"/>
-          <path d="M6 5.2v4.6c0 1.6-.7 2.5-2.2 2.8" fill="none" stroke="#FDE68A" stroke-width="1.4" stroke-linecap="round"/>
-          <path d="M9 10.7c.4.8 1.1 1.2 2.1 1.2 1 0 1.9-.4 1.9-1.3 0-.8-.5-1.1-1.6-1.5l-.8-.3c-1.3-.5-1.9-1.2-1.9-2.3 0-1.4 1.2-2.3 2.7-2.3 1.1 0 1.9.4 2.5 1.2" fill="none" stroke="#FDE68A" stroke-width="1.2" stroke-linecap="round"/>
+        <g transform="translate(751,481)" fill="none" stroke="#91cbff" stroke-width="1.2" stroke-linecap="square">
+          <rect x="2" y="6.8" width="2.4" height="2.4"/>
+          <rect x="11.6" y="2" width="2.4" height="2.4"/>
+          <rect x="11.6" y="11.6" width="2.4" height="2.4"/>
+          <line x1="4.4" y1="8" x2="11.6" y2="3.8"/>
+          <line x1="4.4" y1="8" x2="11.6" y2="12.8"/>
         </g>
         
-
-      <text x="94" y="477"
-            fill="#F7E7A5"
-            font-family="Inter, Segoe UI, Arial, sans-serif"
-            font-size="12" font-weight="600">JavaScript</text>
-    </g>
-    
-    <g>
-      <rect x="202" y="456" width="102" height="32" rx="16"
-            fill="#17211C" stroke="#38483F" stroke-width="1"/>
-
-      <rect x="210" y="463" width="18" height="18" rx="9"
-            fill="#243229" stroke="#51675B" stroke-width="1"/>
-
-      
-        <g transform="translate(211,464)" fill="none" stroke="#BBF7D0" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M10.8 2.8a3.2 3.2 0 0 0-3.7 4l-3.9 3.9a1.3 1.3 0 1 0 1.8 1.8l3.9-3.9a3.2 3.2 0 0 0 4-3.7l-2.1 2.1-2-2 2-2Z"/>
-        </g>
-        
-
-      <text x="236" y="477"
-            fill="#D8EBDD"
-            font-family="Inter, Segoe UI, Arial, sans-serif"
-            font-size="12" font-weight="600">Tools</text>
-    </g>
-    
-    <g>
-      <rect x="314" y="456" width="102" height="32" rx="16"
-            fill="#1F1821" stroke="#47364A" stroke-width="1"/>
-
-      <rect x="322" y="463" width="18" height="18" rx="9"
-            fill="#302434" stroke="#635169" stroke-width="1"/>
-
-      
-        <g transform="translate(323,464)" fill="none" stroke="#F5D0FE" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M3 2.6 11 9.6 7.4 10.2 9.2 13.6 7.5 14.4 5.8 11 3 13.2Z"/>
-        </g>
-        
-
-      <text x="348" y="477"
-            fill="#E9DDEA"
-            font-family="Inter, Segoe UI, Arial, sans-serif"
-            font-size="12" font-weight="600">UX</text>
-    </g>
-    
-    </g>
-    
-    <g>
-      <rect x="480" y="330" width="404" height="178" rx="22"
-            fill="#0D1522" stroke="#243447" stroke-width="1.2"/>
-
-      <circle cx="506" cy="360" r="5" fill="#5FA8FF"/>
-
-      <text x="524" y="366" fill="#EAF1F8"
-            font-family="Inter, Segoe UI, Arial, sans-serif"
-            font-size="18" font-weight="800">Serverless Tools</text>
-
-      
-    <text x="504" y="418" fill="#B8C2CF"
-          font-family="Inter, Segoe UI, Arial, sans-serif"
-          font-size="14" font-weight="400">
-    <tspan x="504" dy="0">Small useful systems, automations and</tspan><tspan x="504" dy="22">API experiments.</tspan></text>
-
-      
-    <g>
-      <rect x="504" y="456" width="108" height="32" rx="16"
-            fill="#251A12" stroke="#4B3627" stroke-width="1"/>
-
-      <rect x="512" y="463" width="18" height="18" rx="9"
-            fill="#3B271B" stroke="#6A4630" stroke-width="1"/>
-
-      
-        <g transform="translate(513,464)" fill="none" stroke="#FDBA74" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M3 11.5h9.2a2.8 2.8 0 0 0 0-5.6 4.2 4.2 0 0 0-7.9 1.1A2.6 2.6 0 0 0 3 11.5Z"/>
-          <path d="M5.2 13.2h6.2"/>
-        </g>
-        
-
-      <text x="538" y="477"
-            fill="#F1D6C2"
-            font-family="Inter, Segoe UI, Arial, sans-serif"
-            font-size="12" font-weight="600">Workers</text>
-    </g>
-    
-    <g>
-      <rect x="622" y="456" width="132" height="32" rx="16"
-            fill="#18211A" stroke="#35493A" stroke-width="1"/>
-
-      <rect x="630" y="463" width="18" height="18" rx="9"
-            fill="#24322A" stroke="#4F6758" stroke-width="1"/>
-
-      
-        <g transform="translate(631,464)" fill="none" stroke="#BBF7D0" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="8" cy="8" r="2.1"/>
-          <path d="M8 2.2v2"/>
-          <path d="M8 11.8v2"/>
-          <path d="M2.2 8h2"/>
-          <path d="M11.8 8h2"/>
-          <path d="M4 4l1.4 1.4"/>
-          <path d="M10.6 10.6 12 12"/>
-          <path d="M12 4l-1.4 1.4"/>
-          <path d="M5.4 10.6 4 12"/>
-        </g>
-        
-
-      <text x="656" y="477"
-            fill="#D9EBDD"
-            font-family="Inter, Segoe UI, Arial, sans-serif"
-            font-size="12" font-weight="600">Automation</text>
-    </g>
-    
-    <g>
-      <rect x="764" y="456" width="102" height="32" rx="16"
-            fill="#142331" stroke="#2F4C64" stroke-width="1"/>
-
-      <rect x="772" y="463" width="18" height="18" rx="9"
-            fill="#1D3348" stroke="#40617A" stroke-width="1"/>
-
-      
-        <g transform="translate(773,464)" fill="none" stroke="#93C5FD" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="3.2" cy="8" r="1.5"/>
-          <circle cx="12.8" cy="3.2" r="1.5"/>
-          <circle cx="12.8" cy="12.8" r="1.5"/>
-          <path d="M4.7 7.3 11.3 3.9"/>
-          <path d="M4.7 8.7 11.3 12.1"/>
-        </g>
-        
-
-      <text x="798" y="477"
-            fill="#D3E6F7"
-            font-family="Inter, Segoe UI, Arial, sans-serif"
-            font-size="12" font-weight="600">APIs</text>
+      <text x="775" y="493" class="pixel-small" fill="#d7efff" font-size="10">APIs</text>
     </g>
     
     </g>
     
 
-  <text x="36" y="552" fill="#7E8B99"
-        font-family="Inter, Segoe UI, Arial, sans-serif"
-        font-size="12">
-    last update: 28.05.2026 • 01:43
-  </text>
+  <text x="36" y="548" class="pixel-small" fill="#9ca99c" font-size="10">last update: 28.05.2026 • 01:52</text>
 </svg>
