@@ -1,0 +1,142 @@
+<svg width="900" height="450" viewBox="0 0 900 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="900" y2="450" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#020617"/>
+      <stop offset="0.55" stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#083344"/>
+    </linearGradient>
+
+    <linearGradient id="accent" x1="0" y1="0" x2="900" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#0EA5E9"/>
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="900" height="450" rx="28" fill="url(#bg)"/>
+  <rect x="1" y="1" width="898" height="448" rx="27" stroke="#164E63" stroke-width="2"/>
+
+  <rect x="36" y="34" width="10" height="48" rx="5" fill="url(#accent)" filter="url(#glow)"/>
+
+  <text x="64" y="52" fill="#E0F2FE"
+        font-family="JetBrains Mono, Consolas, monospace" font-size="28" font-weight="700">
+    Project Showcase
+  </text>
+
+  <text x="64" y="78" fill="#67E8F9"
+        font-family="JetBrains Mono, Consolas, monospace" font-size="14">
+    selected builds, tools and experiments
+  </text>
+
+  <rect x="36" y="94" width="828" height="3" rx="2" fill="url(#accent)" filter="url(#glow)"/>
+
+  
+    <g>
+      <rect x="36" y="112" width="392" height="128" rx="22" fill="#0F172A" stroke="#164E63" stroke-width="1.5"/>
+      <circle cx="60" cy="136" r="5" fill="#22D3EE"/>
+      <text x="76" y="142" fill="#E0F2FE"
+            font-family="JetBrains Mono, Consolas, monospace" font-size="18" font-weight="700">MRPSite</text>
+
+      <text x="56" y="174" fill="#CBD5E1"
+            font-family="JetBrains Mono, Consolas, monospace" font-size="13">Modern web project with clean UI and polished layouts.</text>
+
+      
+    <rect x="56" y="198" rx="12" ry="12" width="62" height="26" fill="#082F49" stroke="#155E75" />
+    <text x="87.0" y="215" text-anchor="middle"
+          fill="#67E8F9" font-family="JetBrains Mono, Consolas, monospace" font-size="12">React</text>
+    
+    <rect x="128" y="198" rx="12" ry="12" width="98" height="26" fill="#082F49" stroke="#155E75" />
+    <text x="177.0" y="215" text-anchor="middle"
+          fill="#67E8F9" font-family="JetBrains Mono, Consolas, monospace" font-size="12">JavaScript</text>
+    
+    <rect x="236" y="198" rx="12" ry="12" width="62" height="26" fill="#082F49" stroke="#155E75" />
+    <text x="267.0" y="215" text-anchor="middle"
+          fill="#67E8F9" font-family="JetBrains Mono, Consolas, monospace" font-size="12">UI</text>
+    
+    </g>
+    
+    <g>
+      <rect x="472" y="112" width="392" height="128" rx="22" fill="#0F172A" stroke="#164E63" stroke-width="1.5"/>
+      <circle cx="496" cy="136" r="5" fill="#22D3EE"/>
+      <text x="512" y="142" fill="#E0F2FE"
+            font-family="JetBrains Mono, Consolas, monospace" font-size="18" font-weight="700">AI Moderation Worker</text>
+
+      <text x="492" y="174" fill="#CBD5E1"
+            font-family="JetBrains Mono, Consolas, monospace" font-size="13">Cloudflare worker with moderation flow, filters and API fallback.</text>
+
+      
+    <rect x="492" y="198" rx="12" ry="12" width="74" height="26" fill="#082F49" stroke="#155E75" />
+    <text x="529.0" y="215" text-anchor="middle"
+          fill="#67E8F9" font-family="JetBrains Mono, Consolas, monospace" font-size="12">Workers</text>
+    
+    <rect x="576" y="198" rx="12" ry="12" width="62" height="26" fill="#082F49" stroke="#155E75" />
+    <text x="607.0" y="215" text-anchor="middle"
+          fill="#67E8F9" font-family="JetBrains Mono, Consolas, monospace" font-size="12">API</text>
+    
+    <rect x="648" y="198" rx="12" ry="12" width="62" height="26" fill="#082F49" stroke="#155E75" />
+    <text x="679.0" y="215" text-anchor="middle"
+          fill="#67E8F9" font-family="JetBrains Mono, Consolas, monospace" font-size="12">AI</text>
+    
+    </g>
+    
+    <g>
+      <rect x="36" y="264" width="392" height="128" rx="22" fill="#0F172A" stroke="#164E63" stroke-width="1.5"/>
+      <circle cx="60" cy="288" r="5" fill="#22D3EE"/>
+      <text x="76" y="294" fill="#E0F2FE"
+            font-family="JetBrains Mono, Consolas, monospace" font-size="18" font-weight="700">Window Translator</text>
+
+      <text x="56" y="326" fill="#CBD5E1"
+            font-family="JetBrains Mono, Consolas, monospace" font-size="13">Translation and refinement utility focused on smooth UX.</text>
+
+      
+    <rect x="56" y="350" rx="12" ry="12" width="98" height="26" fill="#082F49" stroke="#155E75" />
+    <text x="105.0" y="367" text-anchor="middle"
+          fill="#67E8F9" font-family="JetBrains Mono, Consolas, monospace" font-size="12">JavaScript</text>
+    
+    <rect x="164" y="350" rx="12" ry="12" width="62" height="26" fill="#082F49" stroke="#155E75" />
+    <text x="195.0" y="367" text-anchor="middle"
+          fill="#67E8F9" font-family="JetBrains Mono, Consolas, monospace" font-size="12">Tools</text>
+    
+    <rect x="236" y="350" rx="12" ry="12" width="62" height="26" fill="#082F49" stroke="#155E75" />
+    <text x="267.0" y="367" text-anchor="middle"
+          fill="#67E8F9" font-family="JetBrains Mono, Consolas, monospace" font-size="12">UX</text>
+    
+    </g>
+    
+    <g>
+      <rect x="472" y="264" width="392" height="128" rx="22" fill="#0F172A" stroke="#164E63" stroke-width="1.5"/>
+      <circle cx="496" cy="288" r="5" fill="#22D3EE"/>
+      <text x="512" y="294" fill="#E0F2FE"
+            font-family="JetBrains Mono, Consolas, monospace" font-size="18" font-weight="700">Serverless Tools</text>
+
+      <text x="492" y="326" fill="#CBD5E1"
+            font-family="JetBrains Mono, Consolas, monospace" font-size="13">Small useful systems, automations and experimental utilities.</text>
+
+      
+    <rect x="492" y="350" rx="12" ry="12" width="74" height="26" fill="#082F49" stroke="#155E75" />
+    <text x="529.0" y="367" text-anchor="middle"
+          fill="#67E8F9" font-family="JetBrains Mono, Consolas, monospace" font-size="12">Workers</text>
+    
+    <rect x="576" y="350" rx="12" ry="12" width="98" height="26" fill="#082F49" stroke="#155E75" />
+    <text x="625.0" y="367" text-anchor="middle"
+          fill="#67E8F9" font-family="JetBrains Mono, Consolas, monospace" font-size="12">Automation</text>
+    
+    <rect x="684" y="350" rx="12" ry="12" width="62" height="26" fill="#082F49" stroke="#155E75" />
+    <text x="715.0" y="367" text-anchor="middle"
+          fill="#67E8F9" font-family="JetBrains Mono, Consolas, monospace" font-size="12">APIs</text>
+    
+    </g>
+    
+
+  <text x="36" y="424" fill="#94A3B8"
+        font-family="JetBrains Mono, Consolas, monospace" font-size="12">
+    last rebuild: 28.05.2026 • 01:01
+  </text>
+</svg>
