@@ -14,7 +14,7 @@
 name        Semoof
 username    None116
 role        Web / Serverless Developer
-stack       JavaScript, React, Cloudflare Workers, APIs, AI tools
+focus       web apps, serverless tools, AI-powered utilities
 status      building quietly
 ```
 
@@ -23,10 +23,10 @@ status      building quietly
 ## Current Build
 
 ```txt
-focus       web apps, serverless tools, AI moderation
-learning    better UI, APIs, deployment
-projects    mostly private
-style       clean monochrome
+working on   private web projects
+learning     better UI, APIs, deployment
+using        JavaScript, React, Cloudflare Workers
+style        clean monochrome
 ```
 
 ---
@@ -35,18 +35,39 @@ style       clean monochrome
 
 <div align="center">
 
+### Core
+
 <img src="https://img.shields.io/badge/JavaScript-111111?style=for-the-badge&logo=javascript&logoColor=white" />
 <img src="https://img.shields.io/badge/React-111111?style=for-the-badge&logo=react&logoColor=white" />
 <img src="https://img.shields.io/badge/HTML5-111111?style=for-the-badge&logo=html5&logoColor=white" />
 <img src="https://img.shields.io/badge/CSS3-111111?style=for-the-badge&logo=css3&logoColor=white" />
-<img src="https://img.shields.io/badge/Node.js-111111?style=for-the-badge&logo=node.js&logoColor=white" />
+
+<br/>
+
+### Runtime & Serverless
+
+<img src="https://img.shields.io/badge/Node.js-111111?style=for-the-badge&logo=nodedotjs&logoColor=white" />
 <img src="https://img.shields.io/badge/Cloudflare-111111?style=for-the-badge&logo=cloudflare&logoColor=white" />
-<img src="https://img.shields.io/badge/Workers-111111?style=for-the-badge&logo=cloudflare&logoColor=white" />
-<img src="https://img.shields.io/badge/API-111111?style=for-the-badge&logo=openapiinitiative&logoColor=white" />
+<img src="https://img.shields.io/badge/Cloudflare%20Workers-111111?style=for-the-badge&logo=cloudflareworkers&logoColor=white" />
+<img src="https://img.shields.io/badge/Serverless-111111?style=for-the-badge&logo=serverless&logoColor=white" />
+
+<br/>
+
+### APIs & Tools
+
+<img src="https://img.shields.io/badge/REST%20API-111111?style=for-the-badge&logo=swagger&logoColor=white" />
+<img src="https://img.shields.io/badge/JSON-111111?style=for-the-badge&logo=json&logoColor=white" />
+<img src="https://img.shields.io/badge/NPM-111111?style=for-the-badge&logo=npm&logoColor=white" />
+<img src="https://img.shields.io/badge/Vite-111111?style=for-the-badge&logo=vite&logoColor=white" />
+
+<br/>
+
+### Workflow
+
 <img src="https://img.shields.io/badge/Git-111111?style=for-the-badge&logo=git&logoColor=white" />
 <img src="https://img.shields.io/badge/GitHub-111111?style=for-the-badge&logo=github&logoColor=white" />
-<img src="https://img.shields.io/badge/VS_Code-111111?style=for-the-badge&logo=visualstudiocode&logoColor=white" />
-<img src="https://img.shields.io/badge/JSON-111111?style=for-the-badge&logo=json&logoColor=white" />
+<img src="https://img.shields.io/badge/GitHub%20Actions-111111?style=for-the-badge&logo=githubactions&logoColor=white" />
+<img src="https://img.shields.io/badge/VS%20Code-111111?style=for-the-badge&logo=visualstudiocode&logoColor=white" />
 
 </div>
 
