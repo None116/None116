@@ -8,6 +8,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: showcase-card
+  cancel-in-progress: true
+
 jobs:
   generate-showcase:
     runs-on: ubuntu-latest
@@ -15,6 +19,12 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Sync latest changes
+        run: |
+          git pull --rebase origin main
 
       - name: Generate showcase SVG
         run: |
@@ -63,6 +73,7 @@ jobs:
 
               for word in words:
                   test = word if not current else current + " " + word
+
                   if len(test) <= max_chars:
                       current = test
                   else:
@@ -81,24 +92,33 @@ jobs:
 
               return lines
 
-          def render_multiline_text(x, y, lines, color="#C8D1DC", size=14, line_height=22, weight="400"):
-              out = [
-                  f'<text x="{x}" y="{y}" fill="{color}" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="{size}" font-weight="{weight}">'
-              ]
+          def render_multiline_text(x, y, lines, color="#B8C2CF", size=14, line_height=20):
+              result = f'''
+              <text x="{x}" y="{y}" fill="{color}"
+                    font-family="Inter, Segoe UI, Arial, sans-serif"
+                    font-size="{size}" font-weight="400">
+              '''
+
               for i, line in enumerate(lines):
                   dy = 0 if i == 0 else line_height
-                  out.append(f'<tspan x="{x}" dy="{dy}">{esc(line)}</tspan>')
-              out.append('</text>')
-              return "".join(out)
+                  result += f'<tspan x="{x}" dy="{dy}">{esc(line)}</tspan>'
+
+              result += "</text>"
+              return result
 
           def chip(x, y, text):
               text = esc(text)
               width = max(64, 24 + len(text) * 8)
+
               svg = f'''
-              <rect x="{x}" y="{y}" width="{width}" height="28" rx="14" fill="#0F2238" stroke="#223A57"/>
-              <text x="{x + width/2}" y="{y + 18}" text-anchor="middle"
-                    fill="#8FB7E8" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="12" font-weight="600">{text}</text>
+              <rect x="{x}" y="{y}" width="{width}" height="28" rx="14"
+                    fill="#0F2238" stroke="#223A57"/>
+              <text x="{x + width / 2}" y="{y + 18}" text-anchor="middle"
+                    fill="#8FB7E8"
+                    font-family="Inter, Segoe UI, Arial, sans-serif"
+                    font-size="12" font-weight="600">{text}</text>
               '''
+
               return svg, width
 
           def project_card(x, y, w, h, project):
@@ -117,19 +137,22 @@ jobs:
               desc_svg = render_multiline_text(
                   x + 22,
                   y + 82,
-                  desc_lines,
-                  color="#B8C2CF",
-                  size=14,
-                  line_height=20
+                  desc_lines
               )
 
               return f'''
               <g>
-                <rect x="{x}" y="{y}" width="{w}" height="{h}" rx="20" fill="#0D1522" stroke="#243447" stroke-width="1.2"/>
+                <rect x="{x}" y="{y}" width="{w}" height="{h}" rx="20"
+                      fill="#0D1522" stroke="#243447" stroke-width="1.2"/>
+
                 <circle cx="{x + 24}" cy="{y + 28}" r="5" fill="#5FA8FF"/>
+
                 <text x="{x + 40}" y="{y + 34}" fill="#EAF1F8"
-                      font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">{title}</text>
+                      font-family="Inter, Segoe UI, Arial, sans-serif"
+                      font-size="18" font-weight="700">{title}</text>
+
                 {desc_svg}
+
                 {chips_svg}
               </g>
               '''
@@ -143,26 +166,31 @@ jobs:
 
           svg = f'''<svg width="{WIDTH}" height="{HEIGHT}" viewBox="0 0 {WIDTH} {HEIGHT}" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="{WIDTH}" height="{HEIGHT}" rx="28" fill="#0A1018"/>
-            <rect x="1" y="1" width="{WIDTH-2}" height="{HEIGHT-2}" rx="27" stroke="#1D2A3A" stroke-width="1.5"/>
+            <rect x="1" y="1" width="{WIDTH - 2}" height="{HEIGHT - 2}" rx="27"
+                  stroke="#1D2A3A" stroke-width="1.5"/>
 
             <rect x="36" y="32" width="8" height="52" rx="4" fill="#5FA8FF"/>
 
             <text x="62" y="52" fill="#F2F6FA"
-                  font-family="Inter, Segoe UI, Arial, sans-serif" font-size="28" font-weight="800">
+                  font-family="Inter, Segoe UI, Arial, sans-serif"
+                  font-size="28" font-weight="800">
               Project Showcase
             </text>
 
             <text x="62" y="76" fill="#8FA3B8"
-                  font-family="Inter, Segoe UI, Arial, sans-serif" font-size="14" font-weight="500">
+                  font-family="Inter, Segoe UI, Arial, sans-serif"
+                  font-size="14" font-weight="500">
               selected builds, tools and experiments
             </text>
 
-            <line x1="36" y1="98" x2="884" y2="98" stroke="#1E3148" stroke-width="2"/>
+            <line x1="36" y1="98" x2="884" y2="98"
+                  stroke="#1E3148" stroke-width="2"/>
 
             {''.join(cards)}
 
             <text x="36" y="468" fill="#7E8B99"
-                  font-family="Inter, Segoe UI, Arial, sans-serif" font-size="12">
+                  font-family="Inter, Segoe UI, Arial, sans-serif"
+                  font-size="12">
               last update: {now}
             </text>
           </svg>'''
@@ -180,7 +208,10 @@ jobs:
 
           if git diff --cached --quiet; then
             echo "No changes"
-          else
-            git commit -m "Update project showcase card"
-            git push
+            exit 0
           fi
+
+          git commit -m "Update project showcase card"
+
+          git pull --rebase origin main
+          git push origin main
