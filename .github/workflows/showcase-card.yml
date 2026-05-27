@@ -75,13 +75,13 @@ jobs:
               }
           ]
 
-          WIDTH = 960
-          HEIGHT = 620
+          WIDTH = 980
+          HEIGHT = 670
 
           def esc(text):
               return html.escape(text)
 
-          def wrap_text(text, max_chars=44, max_lines=2):
+          def wrap_text(text, max_chars=43, max_lines=2):
               words = text.split()
               lines = []
               current = ""
@@ -251,27 +251,39 @@ jobs:
               }.get(tag, "ui")
 
           def chip_width(tag):
-              return max(100, 58 + len(tag) * 7)
+              text_w = len(tag) * 7
+              content_w = 16 + 9 + text_w
+              return max(74, content_w + 30)
 
           def chip(x, y, tag):
               w = chip_width(tag)
+
+              text_w = len(tag) * 7
+              content_w = 16 + 9 + text_w
+
+              start_x = x + (w - content_w) / 2
+              icon_x = start_x
+              text_x = start_x + 25
 
               return f'''
               <g>
                 <rect x="{x}" y="{y}" width="{w}" height="34" rx="17"
                       fill="#151515" stroke="#3A3A3A" stroke-width="1.2"/>
 
-                {svg_icon(tag_kind(tag), x + 16, y + 9, 16)}
+                {svg_icon(tag_kind(tag), icon_x, y + 9, 16)}
 
-                <text x="{x + 42}" y="{y + 22}"
+                <text x="{text_x}" y="{y + 22}"
                       fill="#F0F0F0"
                       font-family="Inter, Segoe UI, Arial, sans-serif"
                       font-size="12" font-weight="700">{esc(tag)}</text>
               </g>
               ''', w
 
+          def badge_width(text):
+              return max(74, 30 + len(text) * 7)
+
           def badge(x, y, text):
-              w = max(76, 28 + len(text) * 7)
+              w = badge_width(text)
 
               return f'''
               <g>
@@ -288,25 +300,25 @@ jobs:
               title = esc(project["title"])
               desc = wrap_text(project["desc"])
 
-              icon_box_x = x + 24
-              icon_box_y = y + 24
-              title_x = x + 64
-              title_y = y + 44
+              icon_box_x = x + 26
+              icon_box_y = y + 26
+              title_x = x + 68
+              title_y = y + 46
 
-              private_badge_w = 76
-              private_badge_x = x + w - private_badge_w - 24
-              private_badge_y = y + 28
+              private_w = badge_width(project["visibility"])
+              private_x = x + w - private_w - 26
+              private_y = y + 30
 
-              status_x = x + 24
-              status_y = y + 66
+              status_x = x + 26
+              status_y = y + 72
 
-              desc_x = x + 24
-              desc_y = y + 118
+              desc_x = x + 26
+              desc_y = y + 126
 
-              chips_x = x + 24
-              chips_y = y + h - 52
+              chips_x = x + 26
+              chips_y = y + h - 58
 
-              visibility_svg, _ = badge(private_badge_x, private_badge_y, project["visibility"])
+              visibility_svg, _ = badge(private_x, private_y, project["visibility"])
               status_svg, _ = badge(status_x, status_y, project["status"])
 
               chips_svg = ""
@@ -315,17 +327,17 @@ jobs:
               for tag in project["tags"]:
                   tag_svg, tag_w = chip(cx, chips_y, tag)
                   chips_svg += tag_svg
-                  cx += tag_w + 10
+                  cx += tag_w + 12
 
               return f'''
               <g>
                 <rect x="{x}" y="{y}" width="{w}" height="{h}" rx="22"
                       fill="#0F0F0F" stroke="#2B2B2B" stroke-width="1.5"/>
 
-                <rect x="{icon_box_x}" y="{icon_box_y}" width="28" height="28" rx="9"
+                <rect x="{icon_box_x}" y="{icon_box_y}" width="30" height="30" rx="10"
                       fill="#050505" stroke="#3A3A3A" stroke-width="1"/>
 
-                {svg_icon(project["icon"], icon_box_x + 6, icon_box_y + 6, 16)}
+                {svg_icon(project["icon"], icon_box_x + 7, icon_box_y + 7, 16)}
 
                 <text x="{title_x}" y="{title_y}" fill="#F5F5F5"
                       font-family="Inter, Segoe UI, Arial, sans-serif"
@@ -341,10 +353,10 @@ jobs:
               '''
 
           cards = [
-              project_card(40, 124, 420, 198, projects[0]),
-              project_card(500, 124, 420, 198, projects[1]),
-              project_card(40, 350, 420, 198, projects[2]),
-              project_card(500, 350, 420, 198, projects[3]),
+              project_card(42, 132, 426, 210, projects[0]),
+              project_card(512, 132, 426, 210, projects[1]),
+              project_card(42, 374, 426, 210, projects[2]),
+              project_card(512, 374, 426, 210, projects[3]),
           ]
 
           svg = f'''<svg width="{WIDTH}" height="{HEIGHT}" viewBox="0 0 {WIDTH} {HEIGHT}" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -352,26 +364,26 @@ jobs:
             <rect x="1" y="1" width="{WIDTH - 2}" height="{HEIGHT - 2}" rx="29"
                   stroke="#2A2A2A" stroke-width="1.5"/>
 
-            <rect x="40" y="34" width="8" height="50" rx="4" fill="#F5F5F5"/>
+            <rect x="42" y="38" width="8" height="50" rx="4" fill="#F5F5F5"/>
 
-            <text x="66" y="54" fill="#F5F5F5"
+            <text x="70" y="58" fill="#F5F5F5"
                   font-family="Inter, Segoe UI, Arial, sans-serif"
                   font-size="29" font-weight="900">
               Project Showcase
             </text>
 
-            <text x="66" y="78" fill="#A8A8A8"
+            <text x="70" y="84" fill="#A8A8A8"
                   font-family="Inter, Segoe UI, Arial, sans-serif"
                   font-size="14" font-weight="500">
               selected builds, tools and experiments
             </text>
 
-            <line x1="40" y1="100" x2="920" y2="100"
+            <line x1="42" y1="110" x2="938" y2="110"
                   stroke="#242424" stroke-width="2"/>
 
             {''.join(cards)}
 
-            <text x="40" y="586" fill="#747474"
+            <text x="42" y="642" fill="#747474"
                   font-family="Inter, Segoe UI, Arial, sans-serif"
                   font-size="12">
               last update: {now}
