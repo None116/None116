@@ -1,6 +1,6 @@
-<svg width="920" height="500" viewBox="0 0 920 500" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="920" height="500" rx="28" fill="#0A1018"/>
-  <rect x="1" y="1" width="918" height="498" rx="27"
+<svg width="920" height="570" viewBox="0 0 920 570" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="920" height="570" rx="28" fill="#0A1018"/>
+  <rect x="1" y="1" width="918" height="568" rx="27"
         stroke="#1D2A3A" stroke-width="1.5"/>
 
   <rect x="36" y="32" width="8" height="52" rx="4" fill="#5FA8FF"/>
@@ -17,174 +17,306 @@
     selected builds, tools and experiments
   </text>
 
-  <line x1="36" y1="98" x2="884" y2="98"
+  <line x1="36" y1="100" x2="884" y2="100"
         stroke="#1E3148" stroke-width="2"/>
 
   
     <g>
-      <rect x="36" y="116" width="404" height="146" rx="20"
+      <rect x="36" y="124" width="404" height="172" rx="22"
             fill="#0D1522" stroke="#243447" stroke-width="1.2"/>
 
-      <circle cx="60" cy="144" r="5" fill="#5FA8FF"/>
+      <circle cx="62" cy="154" r="5" fill="#5FA8FF"/>
 
-      <text x="76" y="150" fill="#EAF1F8"
+      <text x="80" y="160" fill="#EAF1F8"
             font-family="Inter, Segoe UI, Arial, sans-serif"
-            font-size="18" font-weight="700">MRPSite</text>
+            font-size="18" font-weight="800">MRPSite</text>
 
       
-    <text x="58" y="198" fill="#B8C2CF"
+    <text x="60" y="210" fill="#B8C2CF"
           font-family="Inter, Segoe UI, Arial, sans-serif"
           font-size="14" font-weight="400">
-    <tspan x="58" dy="0">Modern web project with clean UI and</tspan><tspan x="58" dy="20">polished layouts.</tspan></text>
+    <tspan x="60" dy="0">Clean web interface with polished</tspan><tspan x="60" dy="22">layouts and UI logic.</tspan></text>
 
       
-    <rect x="58" y="216" width="64" height="28" rx="14"
-          fill="#0F2238" stroke="#223A57"/>
-    <text x="90.0" y="234" text-anchor="middle"
-          fill="#8FB7E8"
-          font-family="Inter, Segoe UI, Arial, sans-serif"
-          font-size="12" font-weight="600">React</text>
+    <g>
+      <rect x="60" y="246" width="92" height="30" rx="15"
+            fill="#0F2238" stroke="#223A57" stroke-width="1"/>
+
+      <rect x="68" y="252" width="18" height="18" rx="9"
+            fill="#14304B" stroke="#27557A" stroke-width="1"/>
+
+      <text x="77" y="264.5" text-anchor="middle"
+            fill="#7DD3FC"
+            font-family="Inter, Segoe UI, Arial, sans-serif"
+            font-size="9" font-weight="800">R</text>
+
+      <text x="94" y="266"
+            fill="#C7D8EA"
+            font-family="Inter, Segoe UI, Arial, sans-serif"
+            font-size="12" font-weight="600">React</text>
+    </g>
     
-    <rect x="132" y="216" width="104" height="28" rx="14"
-          fill="#0F2238" stroke="#223A57"/>
-    <text x="184.0" y="234" text-anchor="middle"
-          fill="#8FB7E8"
-          font-family="Inter, Segoe UI, Arial, sans-serif"
-          font-size="12" font-weight="600">JavaScript</text>
+    <g>
+      <rect x="162" y="246" width="132" height="30" rx="15"
+            fill="#201A08" stroke="#4D4120" stroke-width="1"/>
+
+      <rect x="170" y="252" width="18" height="18" rx="9"
+            fill="#3C320B" stroke="#6B5A18" stroke-width="1"/>
+
+      <text x="179" y="264.5" text-anchor="middle"
+            fill="#FDE68A"
+            font-family="Inter, Segoe UI, Arial, sans-serif"
+            font-size="9" font-weight="800">JS</text>
+
+      <text x="196" y="266"
+            fill="#E7DDAC"
+            font-family="Inter, Segoe UI, Arial, sans-serif"
+            font-size="12" font-weight="600">JavaScript</text>
+    </g>
     
-    <rect x="246" y="216" width="64" height="28" rx="14"
-          fill="#0F2238" stroke="#223A57"/>
-    <text x="278.0" y="234" text-anchor="middle"
-          fill="#8FB7E8"
-          font-family="Inter, Segoe UI, Arial, sans-serif"
-          font-size="12" font-weight="600">UI</text>
+    <g>
+      <rect x="304" y="246" width="88" height="30" rx="15"
+            fill="#132233" stroke="#29435F" stroke-width="1"/>
+
+      <rect x="312" y="252" width="18" height="18" rx="9"
+            fill="#1B2F47" stroke="#345474" stroke-width="1"/>
+
+      <text x="321" y="264.5" text-anchor="middle"
+            fill="#93C5FD"
+            font-family="Inter, Segoe UI, Arial, sans-serif"
+            font-size="9" font-weight="800">UI</text>
+
+      <text x="338" y="266"
+            fill="#C9D8E8"
+            font-family="Inter, Segoe UI, Arial, sans-serif"
+            font-size="12" font-weight="600">UI</text>
+    </g>
     
     </g>
     
     <g>
-      <rect x="480" y="116" width="404" height="146" rx="20"
+      <rect x="480" y="124" width="404" height="172" rx="22"
             fill="#0D1522" stroke="#243447" stroke-width="1.2"/>
 
-      <circle cx="504" cy="144" r="5" fill="#5FA8FF"/>
+      <circle cx="506" cy="154" r="5" fill="#5FA8FF"/>
 
-      <text x="520" y="150" fill="#EAF1F8"
+      <text x="524" y="160" fill="#EAF1F8"
             font-family="Inter, Segoe UI, Arial, sans-serif"
-            font-size="18" font-weight="700">AI Moderation Worker</text>
+            font-size="18" font-weight="800">AI Moderation Worker</text>
 
       
-    <text x="502" y="198" fill="#B8C2CF"
+    <text x="504" y="210" fill="#B8C2CF"
           font-family="Inter, Segoe UI, Arial, sans-serif"
           font-size="14" font-weight="400">
-    <tspan x="502" dy="0">Cloudflare worker with moderation flow,</tspan><tspan x="502" dy="20">filters and API fallback.</tspan></text>
+    <tspan x="504" dy="0">Serverless moderation flow with</tspan><tspan x="504" dy="22">filters and API fallback.</tspan></text>
 
       
-    <rect x="502" y="216" width="80" height="28" rx="14"
-          fill="#0F2238" stroke="#223A57"/>
-    <text x="542.0" y="234" text-anchor="middle"
-          fill="#8FB7E8"
-          font-family="Inter, Segoe UI, Arial, sans-serif"
-          font-size="12" font-weight="600">Workers</text>
+    <g>
+      <rect x="504" y="246" width="108" height="30" rx="15"
+            fill="#23170F" stroke="#4A3324" stroke-width="1"/>
+
+      <rect x="512" y="252" width="18" height="18" rx="9"
+            fill="#3A2417" stroke="#6B4128" stroke-width="1"/>
+
+      <text x="521" y="264.5" text-anchor="middle"
+            fill="#FDBA74"
+            font-family="Inter, Segoe UI, Arial, sans-serif"
+            font-size="9" font-weight="800">W</text>
+
+      <text x="538" y="266"
+            fill="#E6CFBD"
+            font-family="Inter, Segoe UI, Arial, sans-serif"
+            font-size="12" font-weight="600">Workers</text>
+    </g>
     
-    <rect x="592" y="216" width="64" height="28" rx="14"
-          fill="#0F2238" stroke="#223A57"/>
-    <text x="624.0" y="234" text-anchor="middle"
-          fill="#8FB7E8"
-          font-family="Inter, Segoe UI, Arial, sans-serif"
-          font-size="12" font-weight="600">API</text>
+    <g>
+      <rect x="622" y="246" width="88" height="30" rx="15"
+            fill="#122232" stroke="#27445F" stroke-width="1"/>
+
+      <rect x="630" y="252" width="18" height="18" rx="9"
+            fill="#1A3249" stroke="#345A7C" stroke-width="1"/>
+
+      <text x="639" y="264.5" text-anchor="middle"
+            fill="#93C5FD"
+            font-family="Inter, Segoe UI, Arial, sans-serif"
+            font-size="9" font-weight="800">{}</text>
+
+      <text x="656" y="266"
+            fill="#C8D8E8"
+            font-family="Inter, Segoe UI, Arial, sans-serif"
+            font-size="12" font-weight="600">API</text>
+    </g>
     
-    <rect x="666" y="216" width="64" height="28" rx="14"
-          fill="#0F2238" stroke="#223A57"/>
-    <text x="698.0" y="234" text-anchor="middle"
-          fill="#8FB7E8"
-          font-family="Inter, Segoe UI, Arial, sans-serif"
-          font-size="12" font-weight="600">AI</text>
+    <g>
+      <rect x="720" y="246" width="88" height="30" rx="15"
+            fill="#241529" stroke="#4A2A55" stroke-width="1"/>
+
+      <rect x="728" y="252" width="18" height="18" rx="9"
+            fill="#352042" stroke="#6B3E7E" stroke-width="1"/>
+
+      <text x="737" y="264.5" text-anchor="middle"
+            fill="#E9D5FF"
+            font-family="Inter, Segoe UI, Arial, sans-serif"
+            font-size="9" font-weight="800">AI</text>
+
+      <text x="754" y="266"
+            fill="#E5D5EF"
+            font-family="Inter, Segoe UI, Arial, sans-serif"
+            font-size="12" font-weight="600">AI</text>
+    </g>
     
     </g>
     
     <g>
-      <rect x="36" y="286" width="404" height="146" rx="20"
+      <rect x="36" y="322" width="404" height="172" rx="22"
             fill="#0D1522" stroke="#243447" stroke-width="1.2"/>
 
-      <circle cx="60" cy="314" r="5" fill="#5FA8FF"/>
+      <circle cx="62" cy="352" r="5" fill="#5FA8FF"/>
 
-      <text x="76" y="320" fill="#EAF1F8"
+      <text x="80" y="358" fill="#EAF1F8"
             font-family="Inter, Segoe UI, Arial, sans-serif"
-            font-size="18" font-weight="700">Window Translator</text>
+            font-size="18" font-weight="800">Window Translator</text>
 
       
-    <text x="58" y="368" fill="#B8C2CF"
+    <text x="60" y="408" fill="#B8C2CF"
           font-family="Inter, Segoe UI, Arial, sans-serif"
           font-size="14" font-weight="400">
-    <tspan x="58" dy="0">Translation and refinement utility</tspan><tspan x="58" dy="20">focused on smooth user experience.</tspan></text>
+    <tspan x="60" dy="0">Translation utility focused on smooth</tspan><tspan x="60" dy="22">user experience.</tspan></text>
 
       
-    <rect x="58" y="386" width="104" height="28" rx="14"
-          fill="#0F2238" stroke="#223A57"/>
-    <text x="110.0" y="404" text-anchor="middle"
-          fill="#8FB7E8"
-          font-family="Inter, Segoe UI, Arial, sans-serif"
-          font-size="12" font-weight="600">JavaScript</text>
+    <g>
+      <rect x="60" y="444" width="132" height="30" rx="15"
+            fill="#201A08" stroke="#4D4120" stroke-width="1"/>
+
+      <rect x="68" y="450" width="18" height="18" rx="9"
+            fill="#3C320B" stroke="#6B5A18" stroke-width="1"/>
+
+      <text x="77" y="462.5" text-anchor="middle"
+            fill="#FDE68A"
+            font-family="Inter, Segoe UI, Arial, sans-serif"
+            font-size="9" font-weight="800">JS</text>
+
+      <text x="94" y="464"
+            fill="#E7DDAC"
+            font-family="Inter, Segoe UI, Arial, sans-serif"
+            font-size="12" font-weight="600">JavaScript</text>
+    </g>
     
-    <rect x="172" y="386" width="64" height="28" rx="14"
-          fill="#0F2238" stroke="#223A57"/>
-    <text x="204.0" y="404" text-anchor="middle"
-          fill="#8FB7E8"
-          font-family="Inter, Segoe UI, Arial, sans-serif"
-          font-size="12" font-weight="600">Tools</text>
+    <g>
+      <rect x="202" y="444" width="92" height="30" rx="15"
+            fill="#18211D" stroke="#33493D" stroke-width="1"/>
+
+      <rect x="210" y="450" width="18" height="18" rx="9"
+            fill="#223228" stroke="#456152" stroke-width="1"/>
+
+      <text x="219" y="462.5" text-anchor="middle"
+            fill="#BBF7D0"
+            font-family="Inter, Segoe UI, Arial, sans-serif"
+            font-size="9" font-weight="800">T</text>
+
+      <text x="236" y="464"
+            fill="#D5E7DB"
+            font-family="Inter, Segoe UI, Arial, sans-serif"
+            font-size="12" font-weight="600">Tools</text>
+    </g>
     
-    <rect x="246" y="386" width="64" height="28" rx="14"
-          fill="#0F2238" stroke="#223A57"/>
-    <text x="278.0" y="404" text-anchor="middle"
-          fill="#8FB7E8"
-          font-family="Inter, Segoe UI, Arial, sans-serif"
-          font-size="12" font-weight="600">UX</text>
+    <g>
+      <rect x="304" y="444" width="88" height="30" rx="15"
+            fill="#1F1722" stroke="#47314B" stroke-width="1"/>
+
+      <rect x="312" y="450" width="18" height="18" rx="9"
+            fill="#312337" stroke="#62486A" stroke-width="1"/>
+
+      <text x="321" y="462.5" text-anchor="middle"
+            fill="#F5D0FE"
+            font-family="Inter, Segoe UI, Arial, sans-serif"
+            font-size="9" font-weight="800">UX</text>
+
+      <text x="338" y="464"
+            fill="#E6D6EA"
+            font-family="Inter, Segoe UI, Arial, sans-serif"
+            font-size="12" font-weight="600">UX</text>
+    </g>
     
     </g>
     
     <g>
-      <rect x="480" y="286" width="404" height="146" rx="20"
+      <rect x="480" y="322" width="404" height="172" rx="22"
             fill="#0D1522" stroke="#243447" stroke-width="1.2"/>
 
-      <circle cx="504" cy="314" r="5" fill="#5FA8FF"/>
+      <circle cx="506" cy="352" r="5" fill="#5FA8FF"/>
 
-      <text x="520" y="320" fill="#EAF1F8"
+      <text x="524" y="358" fill="#EAF1F8"
             font-family="Inter, Segoe UI, Arial, sans-serif"
-            font-size="18" font-weight="700">Serverless Tools</text>
+            font-size="18" font-weight="800">Serverless Tools</text>
 
       
-    <text x="502" y="368" fill="#B8C2CF"
+    <text x="504" y="408" fill="#B8C2CF"
           font-family="Inter, Segoe UI, Arial, sans-serif"
           font-size="14" font-weight="400">
-    <tspan x="502" dy="0">Small useful systems, automations and</tspan><tspan x="502" dy="20">experimental utilities.</tspan></text>
+    <tspan x="504" dy="0">Small useful systems, automations and</tspan><tspan x="504" dy="22">API experiments.</tspan></text>
 
       
-    <rect x="502" y="386" width="80" height="28" rx="14"
-          fill="#0F2238" stroke="#223A57"/>
-    <text x="542.0" y="404" text-anchor="middle"
-          fill="#8FB7E8"
-          font-family="Inter, Segoe UI, Arial, sans-serif"
-          font-size="12" font-weight="600">Workers</text>
+    <g>
+      <rect x="504" y="444" width="108" height="30" rx="15"
+            fill="#23170F" stroke="#4A3324" stroke-width="1"/>
+
+      <rect x="512" y="450" width="18" height="18" rx="9"
+            fill="#3A2417" stroke="#6B4128" stroke-width="1"/>
+
+      <text x="521" y="462.5" text-anchor="middle"
+            fill="#FDBA74"
+            font-family="Inter, Segoe UI, Arial, sans-serif"
+            font-size="9" font-weight="800">W</text>
+
+      <text x="538" y="464"
+            fill="#E6CFBD"
+            font-family="Inter, Segoe UI, Arial, sans-serif"
+            font-size="12" font-weight="600">Workers</text>
+    </g>
     
-    <rect x="592" y="386" width="104" height="28" rx="14"
-          fill="#0F2238" stroke="#223A57"/>
-    <text x="644.0" y="404" text-anchor="middle"
-          fill="#8FB7E8"
-          font-family="Inter, Segoe UI, Arial, sans-serif"
-          font-size="12" font-weight="600">Automation</text>
+    <g>
+      <rect x="622" y="444" width="132" height="30" rx="15"
+            fill="#172118" stroke="#334737" stroke-width="1"/>
+
+      <rect x="630" y="450" width="18" height="18" rx="9"
+            fill="#233126" stroke="#4A6450" stroke-width="1"/>
+
+      <text x="639" y="462.5" text-anchor="middle"
+            fill="#BBF7D0"
+            font-family="Inter, Segoe UI, Arial, sans-serif"
+            font-size="9" font-weight="800">A</text>
+
+      <text x="656" y="464"
+            fill="#D6E7DA"
+            font-family="Inter, Segoe UI, Arial, sans-serif"
+            font-size="12" font-weight="600">Automation</text>
+    </g>
     
-    <rect x="706" y="386" width="64" height="28" rx="14"
-          fill="#0F2238" stroke="#223A57"/>
-    <text x="738.0" y="404" text-anchor="middle"
-          fill="#8FB7E8"
-          font-family="Inter, Segoe UI, Arial, sans-serif"
-          font-size="12" font-weight="600">APIs</text>
+    <g>
+      <rect x="764" y="444" width="88" height="30" rx="15"
+            fill="#122232" stroke="#27445F" stroke-width="1"/>
+
+      <rect x="772" y="450" width="18" height="18" rx="9"
+            fill="#1A3249" stroke="#345A7C" stroke-width="1"/>
+
+      <text x="781" y="462.5" text-anchor="middle"
+            fill="#93C5FD"
+            font-family="Inter, Segoe UI, Arial, sans-serif"
+            font-size="9" font-weight="800">{}</text>
+
+      <text x="798" y="464"
+            fill="#C8D8E8"
+            font-family="Inter, Segoe UI, Arial, sans-serif"
+            font-size="12" font-weight="600">APIs</text>
+    </g>
     
     </g>
     
 
-  <text x="36" y="468" fill="#7E8B99"
+  <text x="36" y="536" fill="#7E8B99"
         font-family="Inter, Segoe UI, Arial, sans-serif"
         font-size="12">
-    last update: 28.05.2026 • 01:20
+    last update: 28.05.2026 • 01:28
   </text>
 </svg>
