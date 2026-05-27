@@ -4,17 +4,13 @@
 
 <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=22&duration=2400&pause=900&color=22D3EE&center=true&vCenter=true&width=850&lines=I+break+things%2C+fix+them%2C+then+commit.;Building+clean+web+apps+and+serverless+tools.;Private+repos%2C+public+grind.;Quiet+work.+Visible+progress." />
 
-<br/>
-
-<img src="https://komarev.com/ghpvc/?username=None116&style=for-the-badge&color=0891b2&label=PROFILE+VIEWS" />
-
 </div>
 
 ---
 
 <div align="center">
 
-### `Semoof / None116`
+## Semoof / None116
 
 **Web Developer • Serverless Tools • AI Experiments**
 
@@ -67,47 +63,15 @@ status      building quietly
 
 </div>
 
-<br/>
+---
+
+## Project Showcase
 
 <div align="center">
 
-![JavaScript](https://img.shields.io/badge/JavaScript-020617?style=for-the-badge&logo=javascript)
-![React](https://img.shields.io/badge/React-020617?style=for-the-badge&logo=react)
-![Cloudflare](https://img.shields.io/badge/Cloudflare-020617?style=for-the-badge&logo=cloudflare)
-![API](https://img.shields.io/badge/API-020617?style=for-the-badge&logo=fastapi)
-![GitHub](https://img.shields.io/badge/GitHub-020617?style=for-the-badge&logo=github)
+<img src="./assets/showcase.svg" />
 
 </div>
-
----
-
-## Projects
-
-```txt
-AI Moderation Worker
-├─ Cloudflare Worker
-├─ Groq API fallback
-├─ local filter
-├─ moderation logic
-└─ private source code
-```
-
-```txt
-Web Experiments
-├─ clean UI
-├─ animations
-├─ frontend logic
-├─ API integrations
-└─ private builds
-```
-
-```txt
-Serverless Tools
-├─ workers
-├─ APIs
-├─ automation
-└─ small useful systems
-```
 
 ---
 
@@ -122,16 +86,6 @@ Serverless Tools
 <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=None116&theme=github_dark" />
 
 <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=None116&theme=github_dark&utcOffset=3" />
-
-</div>
-
----
-
-## Activity
-
-<div align="center">
-
-<img src="https://raw.githubusercontent.com/None116/None116/output/github-contribution-grid-snake-dark.svg" />
 
 </div>
 
