@@ -2,17 +2,7 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,50:111111,100:2b2b2b&height=220&section=header&text=Semoof&fontSize=64&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=Web%20Developer%20%E2%80%A2%20Serverless%20Tools%20%E2%80%A2%20AI%20Experiments&descSize=17&descAlignY=57" />
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=21&duration=2500&pause=900&color=F5F5F5&center=true&vCenter=true&width=850&lines=I+break+things%2C+fix+them%2C+then+commit.;Building+quietly.+Shipping+clean.;Private+repos%2C+public+grind.;Code+like+a+final+panel." />
-
-</div>
-
----
-
-<div align="center">
-
-# Semoof / None116
-
-**Web Developer • Serverless Tools • AI Experiments**
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=21&duration=2500&pause=900&color=F5F5F5&center=true&vCenter=true&width=850&lines=I+break+things%2C+fix+them%2C+then+commit.;Building+quietly.+Shipping+clean.;Private+repos%2C+public+grind.;Clean+code.+Useful+tools." />
 
 </div>
 
@@ -35,7 +25,8 @@ status      building quietly
 ```txt
 focus       web apps, serverless tools, AI moderation
 learning    better UI, APIs, deployment
-style       clean monochrome / manga panel
+projects    mostly private
+style       clean monochrome
 ```
 
 ---
@@ -46,9 +37,16 @@ style       clean monochrome / manga panel
 
 <img src="https://img.shields.io/badge/JavaScript-111111?style=for-the-badge&logo=javascript&logoColor=white" />
 <img src="https://img.shields.io/badge/React-111111?style=for-the-badge&logo=react&logoColor=white" />
+<img src="https://img.shields.io/badge/HTML5-111111?style=for-the-badge&logo=html5&logoColor=white" />
+<img src="https://img.shields.io/badge/CSS3-111111?style=for-the-badge&logo=css3&logoColor=white" />
+<img src="https://img.shields.io/badge/Node.js-111111?style=for-the-badge&logo=node.js&logoColor=white" />
 <img src="https://img.shields.io/badge/Cloudflare-111111?style=for-the-badge&logo=cloudflare&logoColor=white" />
-<img src="https://img.shields.io/badge/API-111111?style=for-the-badge&logo=fastapi&logoColor=white" />
+<img src="https://img.shields.io/badge/Workers-111111?style=for-the-badge&logo=cloudflare&logoColor=white" />
+<img src="https://img.shields.io/badge/API-111111?style=for-the-badge&logo=openapiinitiative&logoColor=white" />
+<img src="https://img.shields.io/badge/Git-111111?style=for-the-badge&logo=git&logoColor=white" />
 <img src="https://img.shields.io/badge/GitHub-111111?style=for-the-badge&logo=github&logoColor=white" />
+<img src="https://img.shields.io/badge/VS_Code-111111?style=for-the-badge&logo=visualstudiocode&logoColor=white" />
+<img src="https://img.shields.io/badge/JSON-111111?style=for-the-badge&logo=json&logoColor=white" />
 
 </div>
 
