@@ -1,0 +1,130 @@
+name: Update Terminal SVG
+
+on:
+  schedule:
+    - cron: "0 8 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  terminal:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate terminal
+        run: |
+          mkdir -p assets
+
+          cat > assets/terminal.svg <<'EOF'
+          <svg width="920" height="360" viewBox="0 0 920 360" xmlns="http://www.w3.org/2000/svg">
+            <style>
+              text {
+                font-family: JetBrains Mono, Consolas, monospace;
+                font-size: 15px;
+              }
+
+              .line {
+                opacity: 0;
+                animation: show 0.2s forwards;
+              }
+
+              .scroll {
+                animation: scroll 26s linear infinite;
+              }
+
+              @keyframes show {
+                to { opacity: 1; }
+              }
+
+              @keyframes scroll {
+                0% { transform: translateY(0); }
+                35% { transform: translateY(0); }
+                100% { transform: translateY(-260px); }
+              }
+
+              .cursor {
+                animation: blink 1s step-end infinite;
+              }
+
+              @keyframes blink {
+                50% { opacity: 0; }
+              }
+            </style>
+
+            <rect width="920" height="360" rx="20" fill="#050505"/>
+            <rect x="1" y="1" width="918" height="358" rx="19" fill="none" stroke="#2A2A2A"/>
+
+            <rect x="0" y="0" width="920" height="42" rx="20" fill="#101010"/>
+            <circle cx="24" cy="21" r="6" fill="#555"/>
+            <circle cx="46" cy="21" r="6" fill="#777"/>
+            <circle cx="68" cy="21" r="6" fill="#999"/>
+
+            <text x="92" y="27" fill="#EDEDED">semoof@github:~/projects</text>
+
+            <clipPath id="clip">
+              <rect x="28" y="60" width="865" height="270"/>
+            </clipPath>
+
+            <g clip-path="url(#clip)">
+              <g class="scroll">
+                <text x="32" y="82" fill="#EDEDED">
+                  <tspan class="line" style="animation-delay:0s" x="32" dy="0">$ whoami</tspan>
+                  <tspan class="line" style="animation-delay:0.4s" x="32" dy="24">semoof@github</tspan>
+                  <tspan class="line" style="animation-delay:0.8s" x="32" dy="24">$ git status</tspan>
+                  <tspan class="line" style="animation-delay:1.2s" x="32" dy="24">On branch main</tspan>
+                  <tspan class="line" style="animation-delay:1.6s" x="32" dy="24">working tree clean</tspan>
+
+                  <tspan class="line" style="animation-delay:2.0s" x="32" dy="24">$ npm install</tspan>
+                  <tspan class="line" style="animation-delay:2.4s" x="32" dy="24">packages checked</tspan>
+                  <tspan class="line" style="animation-delay:2.8s" x="32" dy="24">dependencies ready</tspan>
+
+                  <tspan class="line" style="animation-delay:3.2s" x="32" dy="24">$ npm run dev</tspan>
+                  <tspan class="line" style="animation-delay:3.6s" x="32" dy="24">local server started</tspan>
+                  <tspan class="line" style="animation-delay:4.0s" x="32" dy="24">listening on localhost:5173</tspan>
+
+                  <tspan class="line" style="animation-delay:4.4s" x="32" dy="24">$ curl /api/health</tspan>
+                  <tspan class="line" style="animation-delay:4.8s" x="32" dy="24">{ "status": "ok", "runtime": "worker" }</tspan>
+
+                  <tspan class="line" style="animation-delay:5.2s" x="32" dy="24">$ npm run build</tspan>
+                  <tspan class="line" style="animation-delay:5.6s" x="32" dy="24">bundling assets</tspan>
+                  <tspan class="line" style="animation-delay:6.0s" x="32" dy="24">optimizing chunks</tspan>
+                  <tspan class="line" style="animation-delay:6.4s" x="32" dy="24">build complete</tspan>
+
+                  <tspan class="line" style="animation-delay:6.8s" x="32" dy="24">$ wrangler deploy</tspan>
+                  <tspan class="line" style="animation-delay:7.2s" x="32" dy="24">uploading worker</tspan>
+                  <tspan class="line" style="animation-delay:7.6s" x="32" dy="24">deployment successful</tspan>
+
+                  <tspan class="line" style="animation-delay:8.0s" x="32" dy="24">$ git add .</tspan>
+                  <tspan class="line" style="animation-delay:8.4s" x="32" dy="24">staged changes</tspan>
+                  <tspan class="line" style="animation-delay:8.8s" x="32" dy="24">$ git commit -m "ship clean update"</tspan>
+                  <tspan class="line" style="animation-delay:9.2s" x="32" dy="24">commit created</tspan>
+                  <tspan class="line" style="animation-delay:9.6s" x="32" dy="24">$ git push</tspan>
+                  <tspan class="line" style="animation-delay:10.0s" x="32" dy="24">private repos updated</tspan>
+                  <tspan class="line" style="animation-delay:10.4s" x="32" dy="24">public grind visible</tspan>
+                  <tspan class="line" style="animation-delay:10.8s" x="32" dy="24">$ echo done</tspan>
+                  <tspan class="line" style="animation-delay:11.2s" x="32" dy="24">done <tspan class="cursor">█</tspan></tspan>
+                </text>
+              </g>
+            </g>
+          </svg>
+          EOF
+
+      - name: Commit terminal
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add assets/terminal.svg
+
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+
+          git commit -m "Update terminal SVG"
+          git pull --rebase origin main || true
+          git push origin main
