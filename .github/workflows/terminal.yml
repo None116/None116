@@ -20,18 +20,25 @@ jobs:
           mkdir -p assets
 
           python3 <<'PY'
+          import html
+
+          def esc(s):
+              return html.escape(s)
+
           lines = [
-              "$ neofetch --profile",
-              "OS: Arch Linux x86_64",
-              "User: Semoof / None116",
-              "Shell: zsh",
-              "Stack: JavaScript, React, Workers, APIs",
-              "Mode: private repos, public grind",
+              "semoof@arch ~ % neofetch",
+              "        /\\        OS: Arch Linux x86_64",
+              "       /  \\       User: Semoof / None116",
+              "      / /\\ \\      Shell: zsh",
+              "     / ____ \\     Stack: JavaScript, React, Workers, APIs",
+              "    /_/    \\_\\    Mode: private repos, public grind",
               "",
               "$ pwd",
               "/home/semoof/projects",
+              "",
               "$ ls",
               "MRPSite/  ai-moderation-worker/  translator/  tools/",
+              "",
               "$ git status",
               "On branch main",
               "working tree clean",
@@ -39,130 +46,90 @@ jobs:
               "$ npm install",
               "packages checked",
               "dependencies ready",
+              "",
               "$ npm run dev",
               "local server started",
               "listening on localhost:5173",
+              "",
               "$ curl /api/health",
               '{ "status": "ok", "runtime": "worker", "cache": "warm" }',
+              "",
               "$ node worker.js --dry-run",
               "loading moderation pipeline",
               "local filter ready",
               "api fallback ready",
+              "",
               "$ npm run lint",
               "0 errors found",
+              "",
               "$ npm run build",
               "bundling assets",
               "optimizing chunks",
               "build complete",
+              "",
               "$ wrangler deploy",
               "uploading worker",
               "routes checked",
               "deployment successful",
+              "",
               "$ git add .",
               "staged changes",
+              "",
               '$ git commit -m "ship clean update"',
               "7 files changed",
               "commit created",
+              "",
               "$ git push",
               "enumerating objects",
               "compressing objects",
               "private repos updated",
               "public grind visible",
+              "",
               "$ echo done",
               "done █",
           ]
 
-          arch = [
-              "                   -`",
-              "                  .o+`",
-              "                 `ooo/",
-              "                `+oooo:",
-              "               `+oooooo:",
-              "               -+oooooo+:",
-              "             `/:-:++oooo+:",
-              "            `/++++/+++++++:",
-              "           `/++++++++++++++:",
-              "          `/+++ooooooooooooo/`",
-              "         ./ooosssso++osssssso+`",
-              "        .oossssso-````/ossssss+`",
-              "       -osssssso.      :ssssssso.",
-              "      :osssssss/        osssso+++.",
-              "     /ossssssss/        +ssssooo/-",
-              "   `/ossssso+/:-        -:/+osssso+-",
-              "  `+sso+:-`                 `.-/+oso:",
-              " `++:.                           `-/+/",
-              " .`                                 `/",
-          ]
-
-          def esc(s):
-              return (
-                  s.replace("&", "&amp;")
-                   .replace("<", "&lt;")
-                   .replace(">", "&gt;")
-                   .replace('"', "&quot;")
-              )
-
           tspans = []
           delay = 0.0
 
-          for i, line in enumerate(arch):
-              tspans.append(
-                  f'<tspan class="line arch" style="animation-delay:{delay:.1f}s" x="34" dy="{0 if i == 0 else 20}">{esc(line)}</tspan>'
-              )
-              delay += 0.1
-
-          command_tspans = []
-          delay = 2.1
-          y_start = 84
-
           for i, line in enumerate(lines):
-              x = 390 if i < 14 else (34 if i < 33 else 500)
-              dy = 0 if i in (0, 14, 33) else 22
-
-              if line == "":
-                  dy = 30
-                  text = " "
-              else:
-                  text = esc(line)
-
-              cls = "cmd" if line.startswith("$") else "ok"
-
-              command_tspans.append(
-                  f'<tspan class="line {cls}" style="animation-delay:{delay:.1f}s" x="{x}" dy="{dy}">{text}</tspan>'
+              cls = "cmd" if line.startswith("$") or line.startswith("semoof@arch") else "out"
+              dy = 0 if i == 0 else 22
+              tspans.append(
+                  f'<tspan class="line {cls}" style="animation-delay:{delay:.1f}s" x="34" dy="{dy}">{esc(line)}</tspan>'
               )
-              delay += 0.2
+              delay += 0.12
 
-          svg = f'''<svg width="940" height="920" viewBox="0 0 940 920" xmlns="http://www.w3.org/2000/svg">
+          svg = f'''<svg width="940" height="1420" viewBox="0 0 940 1420" xmlns="http://www.w3.org/2000/svg">
             <style>
+              text {{
+                font-family: JetBrains Mono, Fira Code, Consolas, monospace;
+                font-size: 15px;
+              }}
               .bg {{ fill: #050505; }}
               .top {{ fill: #101010; }}
               .border {{ fill: none; stroke: #2A2A2A; stroke-width: 1.5; }}
-              text {{
-                font-family: JetBrains Mono, Fira Code, Consolas, monospace;
-                font-size: 14px;
-                fill: #EDEDED;
-              }}
-              .muted {{ fill: #9A9A9A; }}
-              .ok {{ fill: #BDBDBD; }}
+              .title {{ fill: #9A9A9A; font-size: 14px; }}
               .cmd {{ fill: #FFFFFF; font-weight: 700; }}
-              .arch {{ fill: #FFFFFF; font-weight: 700; }}
-              .line {{ opacity: 0; animation: show 0.15s forwards; }}
+              .out {{ fill: #BDBDBD; }}
+              .line {{ opacity: 0; animation: show 0.12s forwards; }}
               .cursor {{ animation: blink 1s step-end infinite; }}
               @keyframes show {{ to {{ opacity: 1; }} }}
               @keyframes blink {{ 50% {{ opacity: 0; }} }}
             </style>
 
-            <rect class="bg" width="940" height="920" rx="22"/>
-            <rect class="border" x="1" y="1" width="938" height="918" rx="21"/>
+            <rect class="bg" width="940" height="1420" rx="22"/>
+            <rect class="border" x="1" y="1" width="938" height="1418" rx="21"/>
 
             <rect class="top" x="0" y="0" width="940" height="42" rx="22"/>
             <circle cx="24" cy="21" r="6" fill="#555"/>
             <circle cx="46" cy="21" r="6" fill="#777"/>
             <circle cx="68" cy="21" r="6" fill="#999"/>
-            <text x="92" y="27" class="muted">semoof@arch: ~/projects</text>
+            <text x="92" y="27" class="title">semoof@arch: ~/projects</text>
 
-            <text x="34" y="76">{''.join(tspans)}</text>
-            <text x="390" y="{y_start}">{''.join(command_tspans)}</text>
+            <text x="34" y="76">
+              {''.join(tspans)}
+            </text>
           </svg>'''
 
           svg = svg.replace("done █", 'done <tspan class="cursor">█</tspan>')
