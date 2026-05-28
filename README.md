@@ -91,14 +91,11 @@ style        clean monochrome
 
 </div>
 
----
-
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=16&duration=2100&pause=420&color=EDEDED&center=false&vCenter=true&multiline=true&width=900&height=520&lines=%24+whoami;semoof%40github;.;%24+pwd;%2Fhome%2Fsemoof%2Fprojects;.;%24+git+status;On+branch+main;working+tree+clean;.;%24+npm+install;packages+checked;dependencies+ready;.;%24+npm+run+dev;local+server+started;listening+on+localhost%3A5173;.;%24+curl+%2Fapi%2Fhealth;%7B+%22status%22%3A+%22ok%22%2C+%22runtime%22%3A+%22worker%22+%7D;.;%24+node+worker.js;moderation+pipeline+loaded;local+filter+ready;api+fallback+ready;.;%24+npm+run+build;bundling+assets;optimizing+chunks;build+complete;.;%24+wrangler+deploy;uploading+worker;deployment+successful;.;%24+git+add+.;staged+changes;.;%24+git+commit+-m+%22improve+ui+and+worker+logic%22;7+files+changed;commit+created;.;%24+git+push;enumerating+objects;compressing+objects;writing+objects;private+repos+updated;public+grind+visible;.;%24+npm+run+lint;0+errors+found;.;%24+npm+run+preview;preview+server+online;.;%24+echo+shipping...;shipping..." />
+<img src="./assets/terminal.svg" />
 
 </div>
----
 
 ## Mode
 
