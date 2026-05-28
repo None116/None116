@@ -1,5 +1,4 @@
 name: Update Arch Terminal SVG
-
 on:
   schedule:
     - cron: "0 8 * * 1"
