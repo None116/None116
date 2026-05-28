@@ -1,9 +1,9 @@
 name: Update Arch Terminal SVG
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: "0 8 * * 1"
-  workflow_dispatch:
 
 permissions:
   contents: write
@@ -25,13 +25,13 @@ jobs:
           def esc(s):
               return html.escape(s)
 
+          # команды для терминала
           lines = [
-              "semoof@arch ~ % neofetch",
-              "        /\\        OS: Arch Linux x86_64",
-              "       /  \\       User: Semoof / None116",
-              "      / /\\ \\      Shell: zsh",
-              "     / ____ \\     Stack: JavaScript, React, Workers, APIs",
-              "    /_/    \\_\\    Mode: private repos, public grind",
+              "OS: Arch Linux x86_64",
+              "User: Semoof / None116",
+              "Shell: zsh",
+              "Stack: JavaScript, React, Workers, APIs",
+              "Mode: private repos, public grind",
               "",
               "$ pwd",
               "/home/semoof/projects",
@@ -85,49 +85,53 @@ jobs:
               "private repos updated",
               "public grind visible",
               "",
+              "$ npm run preview",
+              "preview server online",
+              "",
               "$ echo done",
               "done █",
           ]
 
           tspans = []
           delay = 0.0
-
           for i, line in enumerate(lines):
-              cls = "cmd" if line.startswith("$") or line.startswith("semoof@arch") else "out"
+              cls = "cmd" if line.startswith("$") or line.startswith("OS:") or line.startswith("User:") else "out"
               dy = 0 if i == 0 else 22
-              tspans.append(
-                  f'<tspan class="line {cls}" style="animation-delay:{delay:.1f}s" x="34" dy="{dy}">{esc(line)}</tspan>'
-              )
+              tspans.append(f'<tspan class="line {cls}" style="animation-delay:{delay:.1f}s" x="34" dy="{dy}">{esc(line)}</tspan>')
               delay += 0.12
 
-          svg = f'''<svg width="940" height="1420" viewBox="0 0 940 1420" xmlns="http://www.w3.org/2000/svg">
+          # Arch logo path
+          arch_logo = '''
+          <g transform="translate(38 60)">
+            <path d="M96.9 186.5c-7.5-18.3-15.1-34.1-22.1-47.6 13.6-14 30.3-32.1 55.7-55.8-27.5 11.4-46.2 22.9-60.1 34.4-6.4-10.7-12.7-20.8-18.6-30.3-23.7 38.8-37.4 64.8-62.1 111.7 19.4-11.2 34.5-18.1 48.8-20.8-6.1-26.3-4.5-47.6 3.5-66.8 8.7 17.8 19.4 36.5 33.2 55.7-21.1 11.5-43.2 28-69.1 53.4 19.9-5.1 38.2-7.4 55.7-5.8 7.1 11.7 14.8 24.2 23 37.6 6.1-15.3 10.9-29.4 15.5-42.1 16.7 2.8 33.9 8.8 52.6 18.3-10.3-17.6-20.5-33.3-31-47.9z" fill="#00FF00" transform="scale(0.55)"/>
+          </g>
+          '''
+
+          svg = f'''<svg width="940" height="1260" viewBox="0 0 940 1260" xmlns="http://www.w3.org/2000/svg">
             <style>
-              text {{
-                font-family: JetBrains Mono, Fira Code, Consolas, monospace;
-                font-size: 15px;
-              }}
+              text {{ font-family: JetBrains Mono, Fira Code, Consolas, monospace; font-size:15px; }}
               .bg {{ fill: #050505; }}
               .top {{ fill: #101010; }}
-              .border {{ fill: none; stroke: #2A2A2A; stroke-width: 1.5; }}
-              .title {{ fill: #9A9A9A; font-size: 14px; }}
-              .cmd {{ fill: #FFFFFF; font-weight: 700; }}
-              .out {{ fill: #BDBDBD; }}
-              .line {{ opacity: 0; animation: show 0.12s forwards; }}
-              .cursor {{ animation: blink 1s step-end infinite; }}
-              @keyframes show {{ to {{ opacity: 1; }} }}
-              @keyframes blink {{ 50% {{ opacity: 0; }} }}
+              .border {{ fill:none; stroke:#2A2A2A; stroke-width:1.5; }}
+              .cmd {{ fill:#FFFFFF; font-weight:700; }}
+              .out {{ fill:#BDBDBD; }}
+              .line {{ opacity:0; animation:show 0.12s forwards; }}
+              .cursor {{ animation:blink 1s step-end infinite; }}
+              @keyframes show {{ to{{opacity:1;}} }}
+              @keyframes blink {{ 50%{{opacity:0;}} }}
             </style>
 
-            <rect class="bg" width="940" height="1420" rx="22"/>
-            <rect class="border" x="1" y="1" width="938" height="1418" rx="21"/>
-
+            <rect class="bg" width="940" height="1260" rx="22"/>
+            <rect class="border" x="1" y="1" width="938" height="1258" rx="21"/>
             <rect class="top" x="0" y="0" width="940" height="42" rx="22"/>
             <circle cx="24" cy="21" r="6" fill="#555"/>
             <circle cx="46" cy="21" r="6" fill="#777"/>
             <circle cx="68" cy="21" r="6" fill="#999"/>
-            <text x="92" y="27" class="title">semoof@arch: ~/projects</text>
+            <text x="92" y="27" fill="#00FF00">semoof@arch: ~/projects</text>
 
-            <text x="34" y="76">
+            {arch_logo}
+
+            <text x="34" y="180">
               {''.join(tspans)}
             </text>
           </svg>'''
@@ -136,20 +140,16 @@ jobs:
 
           with open("assets/terminal.svg", "w", encoding="utf-8") as f:
               f.write(svg)
-          PY
 
-      - name: Commit and push terminal
+      - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
           git add assets/terminal.svg
-
           if git diff --cached --quiet; then
             echo "No changes"
             exit 0
           fi
-
           git commit -m "Update Arch terminal SVG"
           git pull --rebase origin main || true
           git push origin main
