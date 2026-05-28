@@ -93,6 +93,16 @@ style        clean monochrome
 
 ---
 
+## Terminal
+
+<div align="center">
+
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=16&duration=2200&pause=450&color=EDEDED&center=false&vCenter=true&multiline=true&width=850&height=360&lines=%24+whoami;semoof%40github;.;%24+pwd;%2Fhome%2Fsemoof%2Fprojects;.;%24+git+status;On+branch+main;working+tree+clean;.;%24+npm+install;packages+checked;dependencies+ready;.;%24+npm+run+dev;local+server+started;listening+on+localhost%3A5173;.;%24+curl+%2Fapi%2Fhealth;%7B+%22status%22%3A+%22ok%22%2C+%22runtime%22%3A+%22worker%22+%7D;.;%24+node+worker.js;moderation+pipeline+loaded;local+filter+ready;api+fallback+ready;.;%24+git+add+.;staged+changes;.;%24+git+commit+-m+%22build+quietly%22;commit+created;.;%24+git+push;private+repos+updated;public+grind+visible;.;%24+echo+done;done." />
+
+</div>
+
+---
+
 ## Mode
 
 ```txt
